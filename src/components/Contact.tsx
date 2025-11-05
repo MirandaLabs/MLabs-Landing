@@ -8,13 +8,14 @@ export function Contact() {
   });
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Mensagem enviada! Entraremos em contato em breve.');
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
+    // Envia via cliente de email do usuário (mailto) para mirandalabs.co@gmail.com
+    const { name, email, message } = formData;
+    const subject = encodeURIComponent(`Contato pelo site - ${name || 'Sem nome'}`);
+    const body = encodeURIComponent(`Nome: ${name}\nE-mail: ${email}\n\nMensagem:\n${message}`);
+    // Abre o cliente de e-mail do usuário com os campos preenchidos
+    window.location.href = `mailto:mirandalabs.co@gmail.com?subject=${subject}&body=${body}`;
+    // Limpa o formulário
+    setFormData({ name: '', email: '', message: '' });
   };
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -72,8 +73,8 @@ export function Contact() {
                   <p className="text-[var(--muted)] mb-4">
                     Fale conosco diretamente pelo WhatsApp
                   </p>
-                  <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-2 text-[var(--brand2)] hover:text-[var(--brand1)] transition-colors font-medium" aria-label="Contact via WhatsApp">
-                    <span>+55 11 99999-9999</span>
+                  <a href="https://wa.me/5571999723105" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-2 text-[var(--brand2)] hover:text-[var(--brand1)] transition-colors font-medium" aria-label="Contact via WhatsApp">
+                    <span>+55 71 99972-3105</span>
                   </a>
                 </div>
               </div>
@@ -90,8 +91,8 @@ export function Contact() {
                   <p className="text-[var(--muted)] mb-4">
                     Envie sua proposta por e-mail
                   </p>
-                  <a href="mailto:contato@mirandalabs.com" className="inline-flex items-center space-x-2 text-[var(--brand1)] hover:text-[var(--brand2)] transition-colors font-medium" aria-label="Contact via email">
-                    <span>contato@mirandalabs.com</span>
+                  <a href="mailto:mirandalabs.co@gmail.com" className="inline-flex items-center space-x-2 text-[var(--brand1)] hover:text-[var(--brand2)] transition-colors font-medium" aria-label="Contact via email">
+                    <span>mirandalabs.co@gmail.com</span>
                   </a>
                 </div>
               </div>

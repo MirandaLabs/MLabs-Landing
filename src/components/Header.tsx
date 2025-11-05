@@ -24,9 +24,7 @@ export function Header() {
         <div className="flex justify-between items-center h-16 sm:h-20">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-[var(--brand1)] to-[var(--brand2)] rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm sm:text-base">
-                ML
-              </span>
+              <img src="/src/assets/images/header/logo_miranda_labs.png" alt="Miranda Labs Logo" />
             </div>
             <span className="text-lg sm:text-xl font-bold text-[var(--text)]">
               Miranda Labs

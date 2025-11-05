@@ -2,22 +2,22 @@ import React from 'react';
 import { ArrowRightIcon } from 'lucide-react';
 export function Cases() {
   const cases = [{
-    title: 'Plataforma de E-commerce',
-    description: 'Desenvolvimento completo de marketplace com mais de 10.000 produtos e integração com múltiplos gateways de pagamento',
-    tags: ['React', 'Node.js', 'AWS'],
-    results: '+300% conversão',
-    image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&auto=format&fit=crop'
+    title: 'Orkestra',
+    description: 'Plataforma de orquestração de microserviços com foco em escalabilidade e resiliência',
+    tags: ['React/vite', 'Node.js', 'AWS'],
+    results: 'Em desenvolvimento',
+    image: '/src/assets/images/capabilites/Logo_Orkestra.png'
   }, {
-    title: 'App de Gestão Financeira',
-    description: 'Aplicativo mobile para controle financeiro pessoal com IA para categorização automática de gastos',
-    tags: ['React Native', 'Python', 'TensorFlow'],
-    results: '50k+ downloads',
+    title: 'Cardápio QR + Comanda Digital',
+    description: 'Fila de cozinha, pedidos por mesa e painel de produção. Custos otimizados com S3‑compatível e Postgres.',
+    tags: ['React Native', 'Node.js', 'TensorFlow'],
+    results: 'Em desenvolvimento',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop'
   }, {
-    title: 'Sistema de Agendamento',
-    description: 'Solução SaaS para clínicas médicas com agendamento online, prontuário eletrônico e telemedicina',
+    title: 'Catálogo de Árvores (MVP)',
+    description: 'Cadastro e geolocalização de árvores urbanas, coleta em campo e dashboard municipal.',
     tags: ['TypeScript', 'PostgreSQL', 'WebRTC'],
-    results: '100+ clínicas',
+    results: 'Em desenvolvimento',
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop'
   }];
   return <section id="cases" className="py-20 sm:py-32 bg-[var(--bg)]">

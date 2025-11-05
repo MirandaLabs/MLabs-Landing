@@ -20,32 +20,7 @@ export function Capabilities() {
                 </div>)}
             </div>
           </div>
-          <div className="relative">
-            <div className="aspect-square bg-gradient-to-br from-[var(--brand1)]/20 via-[var(--brand2)]/20 to-[var(--brand3)]/20 rounded-2xl p-8 flex items-center justify-center">
-              <div className="text-center space-y-8">
-                <div className="bg-[var(--bg)]/80 backdrop-blur-sm rounded-xl p-6">
-                  <div className="text-5xl font-bold text-[var(--brand1)] mb-2">
-                    100+
-                  </div>
-                  <div className="text-[var(--muted)]">Projetos entregues</div>
-                </div>
-                <div className="bg-[var(--bg)]/80 backdrop-blur-sm rounded-xl p-6">
-                  <div className="text-5xl font-bold text-[var(--brand2)] mb-2">
-                    50+
-                  </div>
-                  <div className="text-[var(--muted)]">
-                    Clientes satisfeitos
-                  </div>
-                </div>
-                <div className="bg-[var(--bg)]/80 backdrop-blur-sm rounded-xl p-6">
-                  <div className="text-5xl font-bold text-[var(--brand3)] mb-2">
-                    5+
-                  </div>
-                  <div className="text-[var(--muted)]">Anos de experiência</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>;

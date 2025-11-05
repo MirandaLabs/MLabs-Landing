@@ -46,20 +46,7 @@ export function Hero() {
               Ver cases
             </button>
           </div>
-          <div className="mt-16 flex flex-wrap items-center justify-center gap-8 opacity-60">
-            <div className="text-sm text-[var(--muted)]">Confiado por:</div>
-            <div className="flex flex-wrap items-center justify-center gap-6">
-              <div className="px-6 py-3 bg-[var(--panel)]/50 rounded-lg text-[var(--muted)] font-medium">
-                Startup A
-              </div>
-              <div className="px-6 py-3 bg-[var(--panel)]/50 rounded-lg text-[var(--muted)] font-medium">
-                Empresa B
-              </div>
-              <div className="px-6 py-3 bg-[var(--panel)]/50 rounded-lg text-[var(--muted)] font-medium">
-                Cliente C
-              </div>
-            </div>
-          </div>
+    
         </div>
       </div>
     </section>;

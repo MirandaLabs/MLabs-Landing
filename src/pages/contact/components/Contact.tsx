@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { SendIcon, MailIcon, MessageCircleIcon } from 'lucide-react';
 export function Contact() {
   const [formData, setFormData] = useState({

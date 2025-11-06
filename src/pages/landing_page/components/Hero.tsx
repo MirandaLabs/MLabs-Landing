@@ -1,6 +1,8 @@
-import React from 'react';
+// no React import needed
 import { ArrowRightIcon, SparklesIcon } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 export function Hero() {
+  const navigate = useNavigate();
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -38,7 +40,7 @@ export function Hero() {
             empresas que querem escalar
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button onClick={() => scrollToSection('contact')} className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[var(--brand1)] to-[var(--brand2)] text-white rounded-lg font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all flex items-center justify-center space-x-2" aria-label="Request a quote">
+            <button onClick={() => navigate('/contato')} className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[var(--brand1)] to-[var(--brand2)] text-white rounded-lg font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all flex items-center justify-center space-x-2" aria-label="Request a quote">
               <span>Quero um orçamento</span>
               <ArrowRightIcon size={20} />
             </button>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { CheckCircleIcon } from 'lucide-react';
 export function Capabilities() {
   const capabilities = ['Stack completo: React, Node.js, Python, TypeScript, AWS, Docker', 'Metodologias ágeis com entregas incrementais', 'Código limpo, testado e documentado', 'Design system e componentes reutilizáveis', 'Performance e otimização desde o início', 'Segurança e compliance (LGPD, GDPR)', 'CI/CD e automação de deploys', 'Monitoramento e analytics integrados'];

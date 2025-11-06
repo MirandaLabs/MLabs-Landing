@@ -1,5 +1,5 @@
-import React from 'react';
-import { MailIcon, MapPinIcon, PhoneIcon } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { MailIcon, MapPinIcon, PhoneIcon, LinkedinIcon, InstagramIcon } from 'lucide-react';
 export function Footer() {
   return <footer className="bg-[var(--bg)] border-t border-[var(--muted)]/20 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,26 +19,18 @@ export function Footer() {
             </p>
           </div>
           <div>
-            <h4 className="text-[var(--text)] font-semibold mb-4">Serviços</h4>
-            <ul className="space-y-2">
+            <h4 className="text-[var(--text)] font-semibold mb-4">Redes sociais</h4>
+            <ul className="space-y-3">
               <li>
-                <a href="#services" className="text-[var(--muted)] hover:text-[var(--brand1)] transition-colors text-sm">
-                  Desenvolvimento
+                <a href="https://www.linkedin.com/company/miranda-labs" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-[var(--muted)] hover:text-[var(--brand1)] transition-colors text-sm">
+                  <LinkedinIcon size={16} />
+                  <span>LinkedIn</span>
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-[var(--muted)] hover:text-[var(--brand1)] transition-colors text-sm">
-                  Consultoria
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-[var(--muted)] hover:text-[var(--brand1)] transition-colors text-sm">
-                  Inovação
-                </a>
-              </li>
-              <li>
-                <a href="#cases" className="text-[var(--muted)] hover:text-[var(--brand1)] transition-colors text-sm">
-                  Cases
+                <a href="https://www.instagram.com/miranda_labs.co/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-[var(--muted)] hover:text-[var(--brand1)] transition-colors text-sm">
+                  <InstagramIcon size={16} />
+                  <span>Instagram</span>
                 </a>
               </li>
             </ul>
@@ -47,14 +39,10 @@ export function Footer() {
             <h4 className="text-[var(--text)] font-semibold mb-4">Empresa</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-[var(--muted)] hover:text-[var(--brand1)] transition-colors text-sm">
-                  Sobre nós
-                </a>
+                <Link to="/about" className="text-[var(--muted)] hover:text-[var(--brand1)] transition-colors text-sm">Sobre nós</Link>
               </li>
               <li>
-                <a href="#contact" className="text-[var(--muted)] hover:text-[var(--brand1)] transition-colors text-sm">
-                  Contato
-                </a>
+                <Link to="/contato" className="text-[var(--muted)] hover:text-[var(--brand1)] transition-colors text-sm">Contato</Link>
               </li>
             </ul>
           </div>
@@ -71,9 +59,7 @@ export function Footer() {
               </li>
               <li className="flex items-start space-x-2 text-sm">
                 <MailIcon size={16} className="text-[var(--brand1)] mt-1 flex-shrink-0" />
-                <span className="text-[var(--muted)]">
-                  mirandalabs.co@gmail.com
-                </span>
+                <span className="text-[var(--muted)]">mirandalabs.co@gmail.com</span>
               </li>
             </ul>
           </div>

@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Desenvolvimento",
+    "icon": "CodeIcon",
+    "color": "var(--brand1)",
+    "subcards": [
+      { "icon": "LayersIcon", "title": "Aplicações Web & Mobile", "description": "Soluções full-stack responsivas e escaláveis" },
+      { "icon": "ZapIcon", "title": "APIs & Integrações", "description": "Arquitetura robusta e microsserviços" },
+      { "icon": "ShieldIcon", "title": "Manutenção & Suporte", "description": "Evolução contínua e correções ágeis" },
+      { "icon": "UsersIcon", "title": "Squad Dedicado", "description": "Time completo para seu projeto" }
+    ]
+  },
+  {
+    "title": "Consultoria",
+    "icon": "LightbulbIcon",
+    "color": "var(--brand2)",
+    "subcards": [
+      { "icon": "SearchIcon", "title": "Auditoria Técnica", "description": "Análise profunda de código e arquitetura" },
+      { "icon": "TrendingUpIcon", "title": "Estratégia Digital", "description": "Roadmap e planejamento de produto" },
+      { "icon": "RocketIcon", "title": "Aceleração de Projetos", "description": "Desbloqueio de gargalos técnicos" },
+      { "icon": "UsersIcon", "title": "Mentoria de Times", "description": "Capacitação e boas práticas" }
+    ]
+  },
+  {
+    "title": "Inovação",
+    "icon": "SparklesIcon",
+    "color": "var(--brand3)",
+    "subcards": [
+      { "icon": "TestTubeIcon", "title": "Provas de Conceito", "description": "Validação rápida de ideias" },
+      { "icon": "PaletteIcon", "title": "Design de Produto", "description": "UX/UI focado em conversão" },
+      { "icon": "SparklesIcon", "title": "IA & Automação", "description": "Soluções inteligentes e eficientes" },
+      { "icon": "RocketIcon", "title": "MVP rápido", "description": "Do conceito ao lançamento" }
+    ]
+  }
+]

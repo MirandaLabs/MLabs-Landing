@@ -3,12 +3,12 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: '/MLabs-Landing/',
+  base: mode === 'production' ? '/MLabs-Landing/' : '/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
   },
-})
+}))

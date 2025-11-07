@@ -7,7 +7,7 @@ export function Footer() {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-br from-[var(--brand1)] to-[var(--brand2)] rounded-lg flex items-center justify-center">
-                <img src="/src/assets/images/header/logo_miranda_labs.png" alt="Miranda Labs Logo" />
+                <img src={`${import.meta.env.BASE_URL}logo_miranda_labs.png`} alt="Miranda Labs Logo" />
               </div>
               <span className="text-xl font-bold text-[var(--text)]">
                 Miranda Labs

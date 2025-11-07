@@ -1,11 +1,13 @@
 import { ArrowRightIcon } from 'lucide-react';
+import orkestraLogo from '@/assets/images/capabilites/Logo_Orkestra.png'; // keep existing folder name
+
 export function Cases() {
   const cases = [{
     title: 'Orkestra',
     description: 'Plataforma de orquestração de microserviços com foco em escalabilidade e resiliência',
     tags: ['React/vite', 'Node.js', 'AWS'],
     results: 'Em desenvolvimento',
-    image: '/src/assets/images/capabilites/Logo_Orkestra.png'
+    image: orkestraLogo,
   }, {
     title: 'Cardápio QR + Comanda Digital',
     description: 'Fila de cozinha, pedidos por mesa e painel de produção. Custos otimizados com S3‑compatível e Postgres.',

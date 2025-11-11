@@ -1,20 +1,24 @@
 import { ArrowRightIcon } from 'lucide-react';
-import orkestraLogo from '@/assets/images/capabilites/Logo_Orkestra.png'; // keep existing folder name
+import { Link } from 'react-router-dom';
+import orkestraLogo from '@/assets/images/capabilites/Logo_Orkestra.png';
 
 export function Cases() {
   const cases = [{
+    id: 'orkestra',
     title: 'Orkestra',
-    description: 'Plataforma de orquestração de microserviços com foco em escalabilidade e resiliência',
+    description: 'Plataforma completa para organização e estruturação de eventos de entretenimento em todo o território brasileiro',
     tags: ['React/vite', 'Node.js', 'AWS'],
     results: 'Em desenvolvimento',
     image: orkestraLogo,
   }, {
+    id: 'cardapio-qr',
     title: 'Cardápio QR + Comanda Digital',
     description: 'Fila de cozinha, pedidos por mesa e painel de produção. Custos otimizados com S3‑compatível e Postgres.',
     tags: ['React Native', 'Node.js', 'TensorFlow'],
     results: 'Em desenvolvimento',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop'
   }, {
+    id: 'catalogo-arvores',
     title: 'Catálogo de Árvores (MVP)',
     description: 'Cadastro e geolocalização de árvores urbanas, coleta em campo e dashboard municipal.',
     tags: ['TypeScript', 'PostgreSQL', 'WebRTC'],
@@ -34,7 +38,7 @@ export function Cases() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cases.map((caseItem, index) => <article key={index} className="bg-[var(--panel)] rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-[var(--muted)]/10 group">
               <div className="aspect-video overflow-hidden">
-                <img src={caseItem.image} alt={caseItem.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                <img src={caseItem.image} alt={caseItem.title} className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300" />
               </div>
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -52,10 +56,14 @@ export function Cases() {
                   <span className="text-[var(--brand2)] font-semibold">
                     {caseItem.results}
                   </span>
-                  <button className="flex items-center space-x-2 text-[var(--brand1)] hover:text-[var(--brand2)] transition-colors font-medium" aria-label={`View details about ${caseItem.title}`}>
+                  <Link 
+                    to={`/case/${caseItem.id}`}
+                    className="flex items-center space-x-2 text-[var(--brand1)] hover:text-[var(--brand2)] transition-colors font-medium" 
+                    aria-label={`View details about ${caseItem.title}`}
+                  >
                     <span>Ver detalhes</span>
                     <ArrowRightIcon size={16} />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </article>)}

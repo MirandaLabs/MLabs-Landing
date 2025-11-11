@@ -1,0 +1,195 @@
+[
+  {
+    "id": "orkestra",
+    "title": "Orkestra",
+    "subtitle": "Sistema de Gerenciamento de Eventos",
+    "description": "Plataforma completa para organização e estruturação de eventos de entretenimento em todo o território brasileiro",
+    "fullDescription": "O Orkestra é um ecossistema integrado que revoluciona a gestão de eventos de entretenimento. Combinando plataforma web, aplicativos mobile administrativos e app para o cliente final, oferece controle completo desde o orçamento inicial até a venda de ingressos e gestão operacional no dia do evento. Uma solução que facilita a vida do organizador e se torna um ativo comercializável da marca.",
+    "tags": ["React/vite", "Node.js", "AWS"],
+    "results": "Em desenvolvimento",
+    "image": "/src/assets/images/capabilites/Logo_Orkestra.png",
+    "challenge": "Criar uma solução integrada que unificasse todos os aspectos da organização de eventos - desde planejamento financeiro, gestão de equipe, controle de estoque, até a experiência do cliente final - em um sistema escalável que pudesse atender eventos em todo o Brasil.",
+    "solution": "Desenvolvemos um ecossistema completo com três frentes integradas: plataforma web para organizadores com visão 360° do evento, app mobile administrativo para gestão de equipe e vendas, e app para clientes com ingressos digitais e carteira virtual. Todas as soluções sincronizadas em tempo real via QR Code e APIs robustas.",
+    "technologies": [
+      {
+        "name": "React + Vite",
+        "description": "Plataforma web responsiva e de alta performance"
+      },
+      {
+        "name": "React Native",
+        "description": "Apps mobile nativos para iOS e Android"
+      },
+      {
+        "name": "Node.js",
+        "description": "Backend escalável com APIs em tempo real"
+      },
+      {
+        "name": "AWS",
+        "description": "Infraestrutura cloud com alta disponibilidade"
+      },
+      {
+        "name": "PostgreSQL",
+        "description": "Banco de dados relacional para gestão de transações"
+      },
+      {
+        "name": "Redis",
+        "description": "Cache e sincronização em tempo real"
+      }
+    ],
+    "features": [
+      "Plataforma web com panorama financeiro e contábil completo",
+      "Gestão de orçamento desde fase inicial até execução",
+      "Sistema de venda de ingressos integrado",
+      "Controle de estoque e inventário em tempo real",
+      "Cadastro e gestão de colaboradores",
+      "Ponto eletrônico para registro de carga horária",
+      "Sistema de vendas mobile para funcionários volantes",
+      "Gestão de estoque pessoal por funcionário",
+      "App cliente com compra de ingressos",
+      "Calendário de eventos futuros",
+      "Carteira virtual recarregável",
+      "Sistema de pagamento via QR Code sincronizado"
+    ],
+    "metrics": [
+      {
+        "value": "100%",
+        "label": "Digital e integrado"
+      },
+      {
+        "value": "60%",
+        "label": "Redução em tempo de gestão"
+      },
+      {
+        "value": "3x",
+        "label": "Aumento em controle financeiro"
+      }
+    ],
+    "gallery": [
+      "/images/cases/Dashboard_Estoque.png",
+      "/images/cases/Dashboard_Financeiro.png",
+      "/images/cases/Organizacao_Centralizada.png"
+    ]
+  },
+  {
+    "id": "cardapio-qr",
+    "title": "Cardápio QR + Comanda Digital",
+    "subtitle": "Sistema completo para restaurantes",
+    "description": "Fila de cozinha, pedidos por mesa e painel de produção. Custos otimizados com S3‑compatível e Postgres.",
+    "fullDescription": "Sistema completo de gestão para restaurantes que integra cardápio digital via QR Code, comanda digital, fila de cozinha inteligente e painel de produção. A solução otimiza o fluxo de trabalho e reduz custos operacionais.",
+    "tags": ["React Native", "Node.js", "TensorFlow"],
+    "results": "Em desenvolvimento",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+    "challenge": "Criar uma solução que otimizasse o atendimento em restaurantes, desde o pedido até a entrega, reduzindo custos e melhorando a experiência do cliente.",
+    "solution": "Desenvolvemos um sistema multiplataforma com React Native para os aplicativos mobile, Node.js no backend e PostgreSQL para persistência de dados. A solução inclui IA para sugestões de pedidos e análise de padrões.",
+    "technologies": [
+      {
+        "name": "React Native",
+        "description": "Apps mobile para clientes e equipe"
+      },
+      {
+        "name": "Node.js",
+        "description": "Backend robusto e APIs em tempo real"
+      },
+      {
+        "name": "PostgreSQL",
+        "description": "Banco de dados relacional otimizado"
+      },
+      {
+        "name": "TensorFlow",
+        "description": "IA para recomendações e análises"
+      },
+      {
+        "name": "S3-Compatible Storage",
+        "description": "Armazenamento econômico de imagens"
+      }
+    ],
+    "features": [
+      "Cardápio digital acessível via QR Code",
+      "Comanda digital com pagamento integrado",
+      "Fila de cozinha inteligente com priorização",
+      "Painel de produção em tempo real",
+      "Recomendações personalizadas por IA",
+      "Gestão de estoque integrada"
+    ],
+    "metrics": [
+      {
+        "value": "40%",
+        "label": "Redução no tempo de atendimento"
+      },
+      {
+        "value": "30%",
+        "label": "Economia em custos operacionais"
+      },
+      {
+        "value": "25%",
+        "label": "Aumento em vendas adicionais"
+      }
+    ],
+    "gallery": [
+      "/images/cases/Dashboard_Estoque.png",
+      "/images/cases/Dashboard_Financeiro.png",
+      "/images/cases/Organizacao_Centralizada.png"
+    ]
+  },
+  {
+    "id": "catalogo-arvores",
+    "title": "Catálogo de Árvores (MVP)",
+    "subtitle": "Gestão de árvores urbanas",
+    "description": "Cadastro e geolocalização de árvores urbanas, coleta em campo e dashboard municipal.",
+    "fullDescription": "Sistema de catalogação e gestão de árvores urbanas que permite cadastro, geolocalização, monitoramento de saúde e manutenção. A solução auxilia prefeituras e órgãos ambientais no planejamento urbano sustentável.",
+    "tags": ["TypeScript", "PostgreSQL", "WebRTC"],
+    "results": "Em desenvolvimento",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop",
+    "challenge": "Criar uma ferramenta que permitisse o cadastro, monitoramento e gestão eficiente de árvores em áreas urbanas, facilitando o trabalho de equipes de campo e gestores municipais.",
+    "solution": "Desenvolvemos uma aplicação web com TypeScript, PostgreSQL com extensões geoespaciais (PostGIS) e WebRTC para comunicação em tempo real. A solução permite coleta de dados offline e sincronização automática.",
+    "technologies": [
+      {
+        "name": "TypeScript",
+        "description": "Código type-safe e manutenível"
+      },
+      {
+        "name": "PostgreSQL + PostGIS",
+        "description": "Banco de dados com suporte geoespacial"
+      },
+      {
+        "name": "WebRTC",
+        "description": "Comunicação em tempo real"
+      },
+      {
+        "name": "PWA",
+        "description": "App progressivo com suporte offline"
+      },
+      {
+        "name": "Mapbox",
+        "description": "Visualização avançada de mapas"
+      }
+    ],
+    "features": [
+      "Cadastro de árvores com fotos e geolocalização",
+      "Mapa interativo com visualização de dados",
+      "Coleta de dados offline com sincronização",
+      "Dashboard municipal com relatórios",
+      "Sistema de alertas para manutenção",
+      "Histórico de intervenções e saúde das árvores"
+    ],
+    "metrics": [
+      {
+        "value": "5000+",
+        "label": "Árvores cadastradas"
+      },
+      {
+        "value": "60%",
+        "label": "Redução no tempo de cadastro"
+      },
+      {
+        "value": "100%",
+        "label": "Cobertura de dados geoespaciais"
+      }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&auto=format&fit=crop"
+    ]
+  }
+]

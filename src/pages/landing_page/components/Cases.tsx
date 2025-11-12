@@ -21,8 +21,8 @@ export function Cases() {
     results: 'Em desenvolvimento',
     image: cardapioLogo
   }, {
-    id: 'rpg-souls-like',
-    title: 'Sistema de RPG Souls-Like',
+    id: 'rpg-collapse',
+    title: 'Colapso RPG',
     description: 'Sistema único de RPG com mecânicas complexas e elementos souls-like. Tudo em uma plataforma integrada com mapas, assets, livros de campanha, fichas e todos os elementos necessários 100% compostos em um único lugar.',
     tags: ['React', 'Node.js', 'WebSocket'],
     results: 'Em desenvolvimento',

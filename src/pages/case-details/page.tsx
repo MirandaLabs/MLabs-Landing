@@ -1,9 +1,8 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeftIcon, CheckCircleIcon } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { RelatedCases } from './components/RelatedCases';
 import { OrkestraEcosystem } from './components/OrkestraEcosystem';
 import casesData from '@/data/cases.json';
 
@@ -61,6 +60,27 @@ function resolveImageUrl(input: string): string {
 export function CaseDetailsPage() {
   const { id } = useParams<{ id: string }>();
   const caseData = casesData.find((c: CaseData) => c.id === id);
+
+  // Índice da imagem aberta no lightbox (null = fechado)
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const closeLightbox = useCallback(() => setLightboxIndex(null), []);
+
+  // Fecha com ESC
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight' && lightboxIndex !== null) {
+        setLightboxIndex((prev) => (prev === null ? prev : (prev + 1) % galleryImages.length));
+      }
+      if (e.key === 'ArrowLeft' && lightboxIndex !== null) {
+        setLightboxIndex((prev) => (prev === null ? prev : (prev - 1 + galleryImages.length) % galleryImages.length));
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [lightboxIndex]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -252,13 +272,65 @@ export function CaseDetailsPage() {
                 <img
                   src={image}
                   alt={`${caseData.title} - Imagem ${index + 1}`}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-300 cursor-zoom-in"
+                  onClick={() => setLightboxIndex(index)}
+                  role="button"
+                  aria-label={`Abrir imagem ${index + 1} em tela cheia`}
                 />
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Lightbox Overlay */}
+      {lightboxIndex !== null && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+          onClick={closeLightbox}
+          aria-modal="true"
+          role="dialog"
+        >
+          <div
+            className="relative max-w-5xl w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={closeLightbox}
+              className="absolute top-2 right-2 px-3 py-2 rounded-md bg-white/10 hover:bg-white/20 text-white text-sm font-medium backdrop-blur-md"
+              aria-label="Fechar"
+            >
+              Fechar
+            </button>
+            {galleryImages.length > 1 && (
+              <>
+                <button
+                  onClick={() => setLightboxIndex((prev) => prev === null ? prev : (prev - 1 + galleryImages.length) % galleryImages.length)}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 px-3 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md"
+                  aria-label="Imagem anterior"
+                >
+                  ‹
+                </button>
+                <button
+                  onClick={() => setLightboxIndex((prev) => prev === null ? prev : (prev + 1) % galleryImages.length)}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 px-3 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md"
+                  aria-label="Próxima imagem"
+                >
+                  ›
+                </button>
+              </>
+            )}
+            <img
+              src={galleryImages[lightboxIndex]}
+              alt={`${caseData.title} - Imagem ampliada ${lightboxIndex + 1}`}
+              className="w-full h-auto rounded-xl shadow-2xl object-contain animate-[fadeIn_0.25s_ease]"
+            />
+            <div className="text-center mt-4 text-white/80 text-sm">
+              {lightboxIndex + 1} / {galleryImages.length}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* CTA Section */}
       <section className="py-20">
@@ -287,8 +359,6 @@ export function CaseDetailsPage() {
         </div>
       </section>
 
-      {/* Related Cases */}
-      <RelatedCases currentCaseId={id || ''} />
 
       <Footer />
     </div>

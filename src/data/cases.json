@@ -65,9 +65,9 @@
       }
     ],
     "gallery": [
-      "/images/cases/Dashboard_Estoque.png",
-      "/images/cases/Dashboard_Financeiro.png",
-      "/images/cases/Organizacao_Centralizada.png"
+      "/images/cases/Orkestra/Dashboard_Estoque.png",
+      "/images/cases/Orkestra/Dashboard_Financeiro.png",
+      "/images/cases/Orkestra/Venda_de_Ingressos.png"
     ]
   },
   {
@@ -78,7 +78,7 @@
     "fullDescription": "Sistema completo de gestão para restaurantes que integra cardápio digital via QR Code, comanda digital, fila de cozinha inteligente e painel de produção. A solução otimiza o fluxo de trabalho e reduz custos operacionais.",
     "tags": ["React Native", "Node.js", "TensorFlow"],
     "results": "Em desenvolvimento",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+    "image": "/images/cases/cardapio_qr/dashboard_admin.png",
     "challenge": "Criar uma solução que otimizasse o atendimento em restaurantes, desde o pedido até a entrega, reduzindo custos e melhorando a experiência do cliente.",
     "solution": "Desenvolvemos um sistema multiplataforma com React Native para os aplicativos mobile, Node.js no backend e PostgreSQL para persistência de dados. A solução inclui IA para sugestões de pedidos e análise de padrões.",
     "technologies": [
@@ -126,70 +126,90 @@
       }
     ],
     "gallery": [
-      "/images/cases/Dashboard_Estoque.png",
-      "/images/cases/Dashboard_Financeiro.png",
-      "/images/cases/Organizacao_Centralizada.png"
+      "/images/cases/cardapio_qr/cardapio_cliente.png",
+      "/images/cases/cardapio_qr/carrinho_cliente.png",
+      "/images/cases/cardapio_qr/pedido_feito_cliente.png"
     ]
   },
   {
-    "id": "catalogo-arvores",
-    "title": "Catálogo de Árvores (MVP)",
-    "subtitle": "Gestão de árvores urbanas",
-    "description": "Cadastro e geolocalização de árvores urbanas, coleta em campo e dashboard municipal.",
-    "fullDescription": "Sistema de catalogação e gestão de árvores urbanas que permite cadastro, geolocalização, monitoramento de saúde e manutenção. A solução auxilia prefeituras e órgãos ambientais no planejamento urbano sustentável.",
-    "tags": ["TypeScript", "PostgreSQL", "WebRTC"],
+    "id": "rpg-souls-like",
+    "title": "Sistema de RPG Souls-Like",
+    "subtitle": "Plataforma completa para RPG de mesa",
+    "description": "Sistema único de RPG com mecânicas complexas e elementos souls-like. Tudo em uma plataforma integrada com mapas, assets, livros de campanha, fichas e todos os elementos necessários 100% compostos em um único lugar.",
+    "fullDescription": "Plataforma definitiva para RPG de mesa que integra todos os elementos necessários para uma experiência completa: criação de personagens com mecânicas souls-like, mapas interativos com fog of war, biblioteca de assets e tokens, livros de campanha digitais, sistema de combate tático, e ferramentas de narração. Tudo sincronizado em tempo real entre mestre e jogadores.",
+    "tags": ["React", "Node.js", "WebSocket", "Canvas API"],
     "results": "Em desenvolvimento",
-    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop",
-    "challenge": "Criar uma ferramenta que permitisse o cadastro, monitoramento e gestão eficiente de árvores em áreas urbanas, facilitando o trabalho de equipes de campo e gestores municipais.",
-    "solution": "Desenvolvemos uma aplicação web com TypeScript, PostgreSQL com extensões geoespaciais (PostGIS) e WebRTC para comunicação em tempo real. A solução permite coleta de dados offline e sincronização automática.",
+    "image": "/images/cases/rpg/Logo_RPG.png",
+    "challenge": "Criar uma plataforma única que reunisse todos os elementos essenciais do RPG de mesa em um só lugar, com mecânicas complexas inspiradas em jogos souls-like, interface intuitiva para mestres e jogadores, e sincronização em tempo real sem comprometer a performance.",
+    "solution": "Desenvolvemos uma plataforma web fullstack com React no frontend utilizando Canvas API para mapas interativos, Node.js com WebSocket para sincronização em tempo real, e PostgreSQL para persistência de campanhas, personagens e assets. Sistema modular permite customização completa de regras e mecânicas.",
     "technologies": [
       {
-        "name": "TypeScript",
-        "description": "Código type-safe e manutenível"
+        "name": "React + TypeScript",
+        "description": "Interface complexa e type-safe"
       },
       {
-        "name": "PostgreSQL + PostGIS",
-        "description": "Banco de dados com suporte geoespacial"
+        "name": "Canvas API + WebGL",
+        "description": "Mapas interativos de alta performance"
       },
       {
-        "name": "WebRTC",
-        "description": "Comunicação em tempo real"
+        "name": "Node.js + Express",
+        "description": "Backend robusto para gestão de sessões"
       },
       {
-        "name": "PWA",
-        "description": "App progressivo com suporte offline"
+        "name": "WebSocket (Socket.io)",
+        "description": "Sincronização em tempo real entre usuários"
       },
       {
-        "name": "Mapbox",
-        "description": "Visualização avançada de mapas"
+        "name": "PostgreSQL",
+        "description": "Persistência de campanhas e personagens"
+      },
+      {
+        "name": "Redis",
+        "description": "Cache e gerenciamento de sessões ativas"
+      },
+      {
+        "name": "AWS S3",
+        "description": "Armazenamento de assets, mapas e imagens"
       }
     ],
     "features": [
-      "Cadastro de árvores com fotos e geolocalização",
-      "Mapa interativo com visualização de dados",
-      "Coleta de dados offline com sincronização",
-      "Dashboard municipal com relatórios",
-      "Sistema de alertas para manutenção",
-      "Histórico de intervenções e saúde das árvores"
+      "Criação de personagens com sistema de atributos souls-like (Vigor, Resistência, Força, Destreza, Inteligência, Fé)",
+      "Fichas de personagem interativas com cálculos automáticos",
+      "Sistema de níveis, progressão e distribuição de pontos",
+      "Mapas interativos com fog of war dinâmico",
+      "Biblioteca de tokens, assets e sprites customizáveis",
+      "Editor de mapas com layers e ferramentas de desenho",
+      "Livros de campanha digitais com rich text editor",
+      "Sistema de combate tático baseado em turnos",
+      "Rolagem de dados com modificadores e vantagens/desvantagens",
+      "Chat em tempo real com comandos e macros",
+      "Sistema de inventário com drag & drop",
+      "Gestão de NPCs com fichas simplificadas",
+      "Música e efeitos sonoros ambiente integrados",
+      "Modo mestre com visão completa e ferramentas de narração",
+      "Modo jogador com interface limpa e responsiva",
+      "Importação/exportação de personagens e campanhas",
+      "Sistema de conquistas e marcos de campanha",
+      "Sincronização automática entre todos os participantes"
     ],
     "metrics": [
       {
-        "value": "5000+",
-        "label": "Árvores cadastradas"
-      },
-      {
-        "value": "60%",
-        "label": "Redução no tempo de cadastro"
-      },
-      {
         "value": "100%",
-        "label": "Cobertura de dados geoespaciais"
+        "label": "Integrado em uma plataforma"
+      },
+      {
+        "value": "Real-time",
+        "label": "Sincronização instantânea"
+      },
+      {
+        "value": "∞",
+        "label": "Possibilidades de customização"
       }
     ],
     "gallery": [
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&auto=format&fit=crop"
+      "/images/cases/rpg/Campanha.png",
+      "/images/cases/rpg/Dashboard.png",
+      "/images/cases/rpg/Ficha_Personagem.png"
     ]
   }
 ]

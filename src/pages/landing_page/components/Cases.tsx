@@ -1,6 +1,9 @@
 import { ArrowRightIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import orkestraLogo from '@/assets/images/capabilites/Logo_Orkestra.png';
+import rpgLogo from '@/assets/images/cases/rpg/Logo_RPG.png';
+import cardapioLogo from '@/assets/images/cases/cardapio_qr/dashboard_admin.png';
+import { OptimizedImage } from '@/utils/imageOptimizer';
 
 export function Cases() {
   const cases = [{
@@ -16,14 +19,14 @@ export function Cases() {
     description: 'Fila de cozinha, pedidos por mesa e painel de produção. Custos otimizados com S3‑compatível e Postgres.',
     tags: ['React Native', 'Node.js', 'TensorFlow'],
     results: 'Em desenvolvimento',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop'
+    image: cardapioLogo
   }, {
-    id: 'catalogo-arvores',
-    title: 'Catálogo de Árvores (MVP)',
-    description: 'Cadastro e geolocalização de árvores urbanas, coleta em campo e dashboard municipal.',
-    tags: ['TypeScript', 'PostgreSQL', 'WebRTC'],
+    id: 'rpg-souls-like',
+    title: 'Sistema de RPG Souls-Like',
+    description: 'Sistema único de RPG com mecânicas complexas e elementos souls-like. Tudo em uma plataforma integrada com mapas, assets, livros de campanha, fichas e todos os elementos necessários 100% compostos em um único lugar.',
+    tags: ['React', 'Node.js', 'WebSocket'],
     results: 'Em desenvolvimento',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop'
+    image: rpgLogo
   }];
   return <section id="cases" className="py-20 sm:py-32 bg-[var(--bg)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,7 +41,20 @@ export function Cases() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cases.map((caseItem, index) => <article key={index} className="bg-[var(--panel)] rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-[var(--muted)]/10 group">
               <div className="aspect-video overflow-hidden">
-                <img src={caseItem.image} alt={caseItem.title} className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300" />
+                {typeof caseItem.image === 'string' && caseItem.image.startsWith('/images/optimized/') ? (
+                  <OptimizedImage
+                    src={caseItem.image}
+                    alt={caseItem.title}
+                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                ) : (
+                  <img
+                    src={caseItem.image as string}
+                    alt={caseItem.title}
+                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                )}
               </div>
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">

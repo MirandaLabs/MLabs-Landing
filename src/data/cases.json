@@ -133,7 +133,7 @@
   },
   {
     "id": "rpg-souls-like",
-    "title": "Sistema de RPG Souls-Like",
+    "title": "Colapso RPG",
     "subtitle": "Plataforma completa para RPG de mesa",
     "description": "Sistema único de RPG com mecânicas complexas e elementos souls-like. Tudo em uma plataforma integrada com mapas, assets, livros de campanha, fichas e todos os elementos necessários 100% compostos em um único lugar.",
     "fullDescription": "Plataforma definitiva para RPG de mesa que integra todos os elementos necessários para uma experiência completa: criação de personagens com mecânicas souls-like, mapas interativos com fog of war, biblioteca de assets e tokens, livros de campanha digitais, sistema de combate tático, e ferramentas de narração. Tudo sincronizado em tempo real entre mestre e jogadores.",
@@ -208,7 +208,7 @@
     ],
     "gallery": [
       "/images/cases/rpg/Campanha.png",
-      "/images/cases/rpg/dashboard.png",
+      "/images/cases/rpg/Dashboard.png",
       "/images/cases/rpg/Ficha_Personagem.png"
     ]
   }

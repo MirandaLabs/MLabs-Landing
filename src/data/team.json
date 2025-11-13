@@ -2,7 +2,7 @@
   {
     "name": "Arthur Miranda",
     "role": "CEO",
-    "bio": "Baiano, 25 anos. Especialista em análise de dados, machine learning, IA conversacional, backends robustos e regras de validação. Atua em consultoria, garantindo clareza e proximidade na comunicação com o cliente.",
+    "bio": "Especialista em análise de dados, machine learning, IA conversacional, backends robustos e regras de validação. Atua em consultoria, garantindo clareza e proximidade na comunicação com o cliente.",
     "specialties": [
       "Python para desenvolvimento",
       "NestJS e Node.js",
@@ -22,7 +22,7 @@
   {
     "name": "Gabriel Miranda",
     "role": "CTO",
-    "bio": "Baiano, 22 anos. Especialista em bancos de dados, infraestrutura e arquitetura de servidores. Lidera a área técnica e traduz complexidades em soluções e explicações simples para nossos clientes.",
+    "bio": "Especialista em bancos de dados, infraestrutura e arquitetura de servidores. Lidera a área técnica e traduz complexidades em soluções e explicações simples para nossos clientes.",
     "specialties": [
       "Python para dados (PySpark)",
       "Visão Computacional",
@@ -36,7 +36,7 @@
   {
     "name": "Gabriel São Pedro",
     "role": "COO",
-    "bio": "Baiano, 24 anos. Especialista em front-end, desenvolvimento mobile e responsividade. Cuida da camada visual com excelência, assegurando qualidade em design e experiência do usuário, além de coordenar equipes em serviços específicos e manter foco constante nas necessidades do cliente.",
+    "bio": "Especialista em front-end, desenvolvimento mobile e responsividade. Cuida da camada visual com excelência, assegurando qualidade em design e experiência do usuário, além de coordenar equipes em serviços específicos e manter foco constante nas necessidades do cliente.",
     "specialties": [
       "Front-end (React, Next.js)",
       "TypeScript, JavaScript",

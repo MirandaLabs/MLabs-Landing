@@ -15,6 +15,7 @@ type CaseData = {
   tags: string[];
   results: string;
   image: string;
+  website?: string;
   challenge: string;
   solution: string;
   technologies: Array<{
@@ -149,6 +150,18 @@ export function CaseDetailsPage() {
               <p className="text-lg text-[var(--muted)] leading-relaxed">
                 {caseData.fullDescription}
               </p>
+              {caseData.website && (
+                <div className="mt-6">
+                  <a
+                    href={caseData.website}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center px-6 py-3 bg-[var(--brand1)] text-white rounded-lg font-semibold hover:bg-[var(--brand2)] transition-colors shadow-lg hover:shadow-xl"
+                  >
+                    Visitar site
+                  </a>
+                </div>
+              )}
             </div>
 
             <div className="relative">

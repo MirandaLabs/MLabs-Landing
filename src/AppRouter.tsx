@@ -6,7 +6,7 @@ import { CaseDetailsPage } from "./pages/case-details/page";
 
 export function AppRouter() {
   return (
-    <BrowserRouter>
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/about" element={<AboutPage />} />

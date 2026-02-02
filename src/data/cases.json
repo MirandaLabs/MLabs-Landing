@@ -71,145 +71,498 @@
     ]
   },
   {
-    "id": "cardapio-qr",
-    "title": "Cardápio QR + Comanda Digital",
-    "subtitle": "Sistema completo para restaurantes",
-    "description": "Fila de cozinha, pedidos por mesa e painel de produção. Custos otimizados com S3‑compatível e Postgres.",
-    "fullDescription": "Sistema completo de gestão para restaurantes que integra cardápio digital via QR Code, comanda digital, fila de cozinha inteligente e painel de produção. A solução otimiza o fluxo de trabalho e reduz custos operacionais.",
-    "tags": ["React Native", "Node.js", "TensorFlow"],
-    "results": "Em desenvolvimento",
-    "image": "/images/cases/cardapio_qr/dashboard_admin.png",
-    "challenge": "Criar uma solução que otimizasse o atendimento em restaurantes, desde o pedido até a entrega, reduzindo custos e melhorando a experiência do cliente.",
-    "solution": "Desenvolvemos um sistema multiplataforma com React Native para os aplicativos mobile, Node.js no backend e PostgreSQL para persistência de dados. A solução inclui IA para sugestões de pedidos e análise de padrões.",
+    "id": "sleepo-fortaleza",
+    "title": "Sleepo Fortaleza",
+    "subtitle": "Landing page para hospedagem",
+    "description": "Página institucional focada em conversão para reservas, com destaque para serviços, localização e experiência do hóspede.",
+    "fullDescription": "Landing page desenvolvida para apresentar a proposta de valor do Sleepo Fortaleza, com navegação clara, seções de diferenciais, chamada para ação e foco em performance para melhorar o interesse por reservas.",
+    "tags": ["Landing Page", "UI/UX", "Performance"],
+    "results": "Publicado",
+    "website": "https://landing-page-sleepo-fortaleza.vercel.app",
+    "image": "/images/cases/Sleepo/5.png",
+    "challenge": "Apresentar a hospedagem de forma clara e atrativa, aumentando o interesse por reservas e reduzindo a fricção de contato.",
+    "solution": "Criamos uma landing page objetiva, responsiva e com hierarquia visual definida, destacando benefícios, localização e chamadas para ação estratégicas.",
     "technologies": [
       {
-        "name": "React Native",
-        "description": "Apps mobile para clientes e equipe"
+        "name": "HTML5",
+        "description": "Estrutura semântica e otimizada"
       },
       {
-        "name": "Node.js",
-        "description": "Backend robusto e APIs em tempo real"
+        "name": "CSS3",
+        "description": "Layout responsivo e moderno"
       },
       {
-        "name": "PostgreSQL",
-        "description": "Banco de dados relacional otimizado"
+        "name": "JavaScript",
+        "description": "Interações leves e foco em usabilidade"
       },
       {
-        "name": "TensorFlow",
-        "description": "IA para recomendações e análises"
+        "name": "SEO On‑Page",
+        "description": "Otimização para buscas locais"
       },
       {
-        "name": "S3-Compatible Storage",
-        "description": "Armazenamento econômico de imagens"
+        "name": "Performance",
+        "description": "Boas práticas de carregamento rápido"
       }
     ],
     "features": [
-      "Cardápio digital acessível via QR Code",
-      "Comanda digital com pagamento integrado",
-      "Fila de cozinha inteligente com priorização",
-      "Painel de produção em tempo real",
-      "Recomendações personalizadas por IA",
-      "Gestão de estoque integrada"
-    ],
-    "metrics": [
-      {
-        "value": "40%",
-        "label": "Redução no tempo de atendimento"
-      },
-      {
-        "value": "30%",
-        "label": "Economia em custos operacionais"
-      },
-      {
-        "value": "25%",
-        "label": "Aumento em vendas adicionais"
-      }
-    ],
-    "gallery": [
-      "/images/cases/cardapio_qr/cardapio_cliente.png",
-      "/images/cases/cardapio_qr/carrinho_cliente.png",
-      "/images/cases/cardapio_qr/pedido_feito_cliente.png"
-    ]
-  },
-  {
-    "id": "rpg-souls-like",
-    "title": "Colapso RPG",
-    "subtitle": "Plataforma completa para RPG de mesa",
-    "description": "Sistema único de RPG com mecânicas complexas e elementos souls-like. Tudo em uma plataforma integrada com mapas, assets, livros de campanha, fichas e todos os elementos necessários 100% compostos em um único lugar.",
-    "fullDescription": "Plataforma definitiva para RPG de mesa que integra todos os elementos necessários para uma experiência completa: criação de personagens com mecânicas souls-like, mapas interativos com fog of war, biblioteca de assets e tokens, livros de campanha digitais, sistema de combate tático, e ferramentas de narração. Tudo sincronizado em tempo real entre mestre e jogadores.",
-    "tags": ["React", "Node.js", "WebSocket", "Canvas API"],
-    "results": "Em desenvolvimento",
-    "image": "/images/cases/rpg/Logo_RPG.png",
-    "challenge": "Criar uma plataforma única que reunisse todos os elementos essenciais do RPG de mesa em um só lugar, com mecânicas complexas inspiradas em jogos souls-like, interface intuitiva para mestres e jogadores, e sincronização em tempo real sem comprometer a performance.",
-    "solution": "Desenvolvemos uma plataforma web fullstack com React no frontend utilizando Canvas API para mapas interativos, Node.js com WebSocket para sincronização em tempo real, e PostgreSQL para persistência de campanhas, personagens e assets. Sistema modular permite customização completa de regras e mecânicas.",
-    "technologies": [
-      {
-        "name": "React + TypeScript",
-        "description": "Interface complexa e type-safe"
-      },
-      {
-        "name": "Canvas API + WebGL",
-        "description": "Mapas interativos de alta performance"
-      },
-      {
-        "name": "Node.js + Express",
-        "description": "Backend robusto para gestão de sessões"
-      },
-      {
-        "name": "WebSocket (Socket.io)",
-        "description": "Sincronização em tempo real entre usuários"
-      },
-      {
-        "name": "PostgreSQL",
-        "description": "Persistência de campanhas e personagens"
-      },
-      {
-        "name": "Redis",
-        "description": "Cache e gerenciamento de sessões ativas"
-      },
-      {
-        "name": "AWS S3",
-        "description": "Armazenamento de assets, mapas e imagens"
-      }
-    ],
-    "features": [
-      "Criação de personagens com sistema de atributos souls-like (Vigor, Resistência, Força, Destreza, Inteligência, Fé)",
-      "Fichas de personagem interativas com cálculos automáticos",
-      "Sistema de níveis, progressão e distribuição de pontos",
-      "Mapas interativos com fog of war dinâmico",
-      "Biblioteca de tokens, assets e sprites customizáveis",
-      "Editor de mapas com layers e ferramentas de desenho",
-      "Livros de campanha digitais com rich text editor",
-      "Sistema de combate tático baseado em turnos",
-      "Rolagem de dados com modificadores e vantagens/desvantagens",
-      "Chat em tempo real com comandos e macros",
-      "Sistema de inventário com drag & drop",
-      "Gestão de NPCs com fichas simplificadas",
-      "Música e efeitos sonoros ambiente integrados",
-      "Modo mestre com visão completa e ferramentas de narração",
-      "Modo jogador com interface limpa e responsiva",
-      "Importação/exportação de personagens e campanhas",
-      "Sistema de conquistas e marcos de campanha",
-      "Sincronização automática entre todos os participantes"
+      "Hero com CTA para reservas",
+      "Seções de diferenciais e serviços",
+      "Galeria visual otimizada",
+      "Mapa e localização em destaque",
+      "Depoimentos e prova social",
+      "Contato rápido via WhatsApp"
     ],
     "metrics": [
       {
         "value": "100%",
-        "label": "Integrado em uma plataforma"
+        "label": "Responsivo"
       },
       {
-        "value": "Real-time",
-        "label": "Sincronização instantânea"
+        "value": "A+",
+        "label": "Performance"
       },
       {
-        "value": "∞",
-        "label": "Possibilidades de customização"
+        "value": "SEO",
+        "label": "Otimizado"
       }
     ],
     "gallery": [
-      "/images/cases/rpg/Campanha.png",
-      "/images/cases/rpg/Dashboard.png",
-      "/images/cases/rpg/Ficha_Personagem.png"
+      "/images/cases/Sleepo/6.png",
+      "/images/cases/Sleepo/7.png",
+      "/images/cases/Sleepo/8.png"
+    ]
+  },
+  {
+    "id": "mar-de-rosas",
+    "title": "Mar de Rosas",
+    "subtitle": "Landing page para marca",
+    "description": "Landing page com foco em storytelling, apresentação de produtos/serviços e conversão de visitantes em contatos.",
+    "fullDescription": "Projeto de landing page para a marca Mar de Rosas, com layout elegante, conteúdo direto e pontos de conversão bem posicionados para facilitar o contato.",
+    "tags": ["Landing Page", "UI/UX", "Conversão"],
+    "results": "Publicado",
+    "website": "https://mar-de-rosas-landing-page.vercel.app",
+    "image": "/images/cases/mar_de_rosas/inicio.png",
+    "challenge": "Criar uma experiência visual que transmitisse a identidade da marca e convertesse visitantes em leads.",
+    "solution": "Desenvolvemos um layout com narrativa clara, chamadas para ação e seções que reforçam credibilidade e benefícios.",
+    "technologies": [
+      {
+        "name": "HTML5",
+        "description": "Base semântica e acessível"
+      },
+      {
+        "name": "CSS3",
+        "description": "Estética refinada e responsiva"
+      },
+      {
+        "name": "JavaScript",
+        "description": "Componentes interativos leves"
+      },
+      {
+        "name": "SEO On‑Page",
+        "description": "Estrutura voltada para buscas"
+      },
+      {
+        "name": "Performance",
+        "description": "Assets otimizados"
+      }
+    ],
+    "features": [
+      "Seções de identidade e valores",
+      "Apresentação de produtos/serviços",
+      "CTA fixo para contato",
+      "FAQ para redução de dúvidas",
+      "Depoimentos e confiança",
+      "Formulário simples"
+    ],
+    "metrics": [
+      {
+        "value": "100%",
+        "label": "Responsivo"
+      },
+      {
+        "value": "A+",
+        "label": "Performance"
+      },
+      {
+        "value": "SEO",
+        "label": "Otimizado"
+      }
+    ],
+    "gallery": [
+      "/images/cases/mar_de_rosas/Acomodacoes.png",
+      "/images/cases/mar_de_rosas/Experiencias.png",
+      "/images/cases/mar_de_rosas/Localizacao.png"
+    ]
+  },
+  {
+    "id": "boxcar",
+    "title": "Boxcar",
+    "subtitle": "Landing page para negócio",
+    "description": "Página enxuta com proposta de valor clara, recursos em destaque e chamada para ação direta.",
+    "fullDescription": "Landing page para a Boxcar com foco em conversão, destacando serviços, benefícios e meios de contato com boa performance e design responsivo.",
+    "tags": ["Landing Page", "UI/UX", "Performance"],
+    "results": "Publicado",
+    "website": "https://boxcar-landing-sandy.vercel.app",
+    "image": "/images/cases/box_car/start.png",
+    "challenge": "Simplificar a comunicação dos serviços e direcionar o usuário para o contato rapidamente.",
+    "solution": "Estruturamos o conteúdo com seções objetivas, CTAs estratégicos e uma jornada curta até o contato.",
+    "technologies": [
+      {
+        "name": "HTML5",
+        "description": "Estrutura leve e objetiva"
+      },
+      {
+        "name": "CSS3",
+        "description": "Layout responsivo"
+      },
+      {
+        "name": "JavaScript",
+        "description": "Interações suaves"
+      },
+      {
+        "name": "SEO On‑Page",
+        "description": "Melhoria de indexação"
+      },
+      {
+        "name": "Performance",
+        "description": "Carregamento rápido"
+      }
+    ],
+    "features": [
+      "Hero com proposta de valor",
+      "Benefícios e diferenciais",
+      "Seção de serviços",
+      "CTA para contato",
+      "Prova social",
+      "Rodapé com canais"
+    ],
+    "metrics": [
+      {
+        "value": "100%",
+        "label": "Responsivo"
+      },
+      {
+        "value": "A+",
+        "label": "Performance"
+      },
+      {
+        "value": "SEO",
+        "label": "Otimizado"
+      }
+    ],
+    "gallery": [
+      "/images/cases/box_car/meio.png",
+      "/images/cases/box_car/services.png",
+      "/images/cases/box_car/end.png"
+    ]
+  },
+  {
+    "id": "odontocare",
+    "title": "OdontoCare",
+    "subtitle": "Landing page para clínica odontológica",
+    "description": "Página institucional voltada para serviços odontológicos, com foco em credibilidade e agendamento.",
+    "fullDescription": "Landing page da OdontoCare desenvolvida para apresentar especialidades, equipe e facilitar o agendamento com foco em confiança e clareza.",
+    "tags": ["Landing Page", "UI/UX", "Conversão"],
+    "results": "Publicado",
+    "website": "https://odontocare-landing.vercel.app",
+    "image": "/images/cases/OdontoCare/1.png",
+    "challenge": "Transmitir confiança e facilitar o agendamento de consultas com poucos cliques.",
+    "solution": "Criamos uma página com seções de especialidades, equipe e CTA para agendamento rápido, garantindo navegação intuitiva.",
+    "technologies": [
+      {
+        "name": "HTML5",
+        "description": "Estrutura semântica"
+      },
+      {
+        "name": "CSS3",
+        "description": "Estilo limpo e profissional"
+      },
+      {
+        "name": "JavaScript",
+        "description": "Interações essenciais"
+      },
+      {
+        "name": "SEO On‑Page",
+        "description": "Otimização local"
+      },
+      {
+        "name": "Performance",
+        "description": "Carregamento rápido"
+      }
+    ],
+    "features": [
+      "Apresentação de especialidades",
+      "Seção de equipe",
+      "Antes e depois",
+      "Agendamento rápido",
+      "Depoimentos",
+      "Contato via WhatsApp"
+    ],
+    "metrics": [
+      {
+        "value": "100%",
+        "label": "Responsivo"
+      },
+      {
+        "value": "A+",
+        "label": "Performance"
+      },
+      {
+        "value": "SEO",
+        "label": "Otimizado"
+      }
+    ],
+    "gallery": [
+      "/images/cases/OdontoCare/2.png",
+      "/images/cases/OdontoCare/3.png",
+      "/images/cases/OdontoCare/4.png"
+    ]
+  },
+  {
+    "id": "pousada-betania",
+    "title": "Pousada Betania Eco Luxury",
+    "subtitle": "Landing page para pousada",
+    "description": "Landing page com foco em experiência, natureza e reserva direta, destacando acomodações e diferenciais.",
+    "fullDescription": "Página institucional da Pousada Betania Eco Luxury com foco em experiência do hóspede, estrutura, imagens e CTA para reserva.",
+    "tags": ["Landing Page", "UI/UX", "Conversão"],
+    "results": "Publicado",
+    "website": "https://pousada-bet-nia-eco-luxury-landing.vercel.app",
+    "image": "/images/cases/Betania/hero.png",
+    "challenge": "Valorizar a experiência e estimular o usuário a reservar sem intermediários.",
+    "solution": "Organizamos o conteúdo com seções visuais, benefícios claros e chamada para ação de reserva em destaque.",
+    "technologies": [
+      {
+        "name": "HTML5",
+        "description": "Estrutura leve"
+      },
+      {
+        "name": "CSS3",
+        "description": "Visual imersivo e responsivo"
+      },
+      {
+        "name": "JavaScript",
+        "description": "Elementos interativos"
+      },
+      {
+        "name": "SEO On‑Page",
+        "description": "Otimização para turismo"
+      },
+      {
+        "name": "Performance",
+        "description": "Carregamento eficiente"
+      }
+    ],
+    "features": [
+      "Hero com destaque para reservas",
+      "Galeria de acomodações",
+      "Diferenciais e experiências",
+      "Localização e mapa",
+      "Perguntas frequentes",
+      "Contato rápido"
+    ],
+    "metrics": [
+      {
+        "value": "100%",
+        "label": "Responsivo"
+      },
+      {
+        "value": "A+",
+        "label": "Performance"
+      },
+      {
+        "value": "SEO",
+        "label": "Otimizado"
+      }
+    ],
+    "gallery": [
+      "/images/cases/Betania/about.png",
+      "/images/cases/Betania/media.png",
+      "/images/cases/Betania/note.png"
+    ]
+  },
+  {
+    "id": "polidiesel",
+    "title": "Polidiesel",
+    "subtitle": "Landing page institucional",
+    "description": "Landing page corporativa para apresentação de serviços, portfólio e canais de contato.",
+    "fullDescription": "Landing page da Polidiesel focada em credibilidade e clareza, com seções informativas e CTA para contato comercial.",
+    "tags": ["Landing Page", "UI/UX", "Performance"],
+    "results": "Publicado",
+    "website": "https://polidiesel-landing.vercel.app",
+    "image": "/images/cases/Polidiesel/Hero.png",
+    "challenge": "Organizar informações técnicas de forma clara e profissional.",
+    "solution": "Estruturamos o conteúdo por seções, com linguagem objetiva, CTAs visíveis e layout responsivo.",
+    "technologies": [
+      {
+        "name": "HTML5",
+        "description": "Semântica e clareza"
+      },
+      {
+        "name": "CSS3",
+        "description": "Layout profissional"
+      },
+      {
+        "name": "JavaScript",
+        "description": "Interações essenciais"
+      },
+      {
+        "name": "SEO On‑Page",
+        "description": "Otimização de conteúdo"
+      },
+      {
+        "name": "Performance",
+        "description": "Boa pontuação de carregamento"
+      }
+    ],
+    "features": [
+      "Seção institucional",
+      "Serviços e diferenciais",
+      "Segmentos atendidos",
+      "CTA para orçamento",
+      "FAQ",
+      "Rodapé completo"
+    ],
+    "metrics": [
+      {
+        "value": "100%",
+        "label": "Responsivo"
+      },
+      {
+        "value": "A+",
+        "label": "Performance"
+      },
+      {
+        "value": "SEO",
+        "label": "Otimizado"
+      }
+    ],
+    "gallery": [
+      "/images/cases/Polidiesel/About.png",
+      "/images/cases/Polidiesel/Services.png",
+      "/images/cases/Polidiesel/Avaliation.png"
+    ]
+  },
+  {
+    "id": "clbmcs-2026",
+    "title": "CLBMCS 2026",
+    "subtitle": "Landing page de evento",
+    "description": "Landing page institucional para evento, com foco em informações essenciais, programação e inscrições.",
+    "fullDescription": "Landing page do CLBMCS 2026 com estrutura objetiva para apresentar o evento, público-alvo, agenda e formas de inscrição, priorizando clareza e conversão.",
+    "tags": ["Landing Page", "UI/UX", "Conversão"],
+    "results": "Publicado",
+    "website": "https://www.clbmcs2026.com.br",
+    "image": "/images/cases/CLBMCS/Landing.png",
+    "challenge": "Organizar informações do evento e facilitar a inscrição com uma navegação simples.",
+    "solution": "Estruturamos a página por seções com hierarquia clara, CTAs para inscrição e conteúdo direto.",
+    "technologies": [
+      {
+        "name": "HTML5",
+        "description": "Estrutura semântica"
+      },
+      {
+        "name": "CSS3",
+        "description": "Layout responsivo"
+      },
+      {
+        "name": "JavaScript",
+        "description": "Interações essenciais"
+      },
+      {
+        "name": "SEO On‑Page",
+        "description": "Otimização para buscas"
+      },
+      {
+        "name": "Performance",
+        "description": "Carregamento rápido"
+      }
+    ],
+    "features": [
+      "Apresentação do evento",
+      "Programação e palestrantes",
+      "Seção de inscrição",
+      "Informações de local",
+      "FAQ",
+      "Contato rápido"
+    ],
+    "metrics": [
+      {
+        "value": "100%",
+        "label": "Responsivo"
+      },
+      {
+        "value": "A+",
+        "label": "Performance"
+      },
+      {
+        "value": "SEO",
+        "label": "Otimizado"
+      }
+    ],
+    "gallery": [
+      "/images/cases/CLBMCS/Local.png",
+      "/images/cases/CLBMCS/Minicursos.png",
+      "/images/cases/CLBMCS/Em_construcao.png"
+    ]
+  },
+  {
+    "id": "eclipse-angels",
+    "title": "Eclipse Angels",
+    "subtitle": "Plataforma digital",
+    "description": "Plataforma com foco em descoberta, perfis e experiência do usuário, com layout moderno e navegação intuitiva.",
+    "fullDescription": "Projeto da Eclipse Angels com interface dark, foco em usabilidade e organização clara das informações, além de seções de destaque, busca e painel do usuário.",
+    "tags": ["UI/UX", "Web App", "Performance"],
+    "results": "Publicado",
+    "image": "/images/cases/eclipse/Landing.png",
+    "challenge": "Criar uma interface moderna e simples de navegar, com destaque para perfis e ações principais.",
+    "solution": "Desenvolvemos uma experiência visual consistente, com hierarquia clara e componentes reutilizáveis para melhor navegação.",
+    "technologies": [
+      {
+        "name": "React",
+        "description": "Interface componentizada"
+      },
+      {
+        "name": "TypeScript",
+        "description": "Tipagem e manutenção"
+      },
+      {
+        "name": "CSS3",
+        "description": "Estilo moderno e responsivo"
+      },
+      {
+        "name": "Node.js",
+        "description": "APIs e integrações"
+      },
+      {
+        "name": "Performance",
+        "description": "Otimização de carregamento"
+      }
+    ],
+    "features": [
+      "Home com destaques",
+      "Busca e filtros",
+      "Perfis detalhados",
+      "Painel do usuário",
+      "Navegação clara",
+      "Layout responsivo"
+    ],
+    "metrics": [
+      {
+        "value": "100%",
+        "label": "Responsivo"
+      },
+      {
+        "value": "A+",
+        "label": "Performance"
+      },
+      {
+        "value": "UI",
+        "label": "Consistente"
+      }
+    ],
+    "gallery": [
+      "/images/cases/eclipse/Metricas.png",
+      "/images/cases/eclipse/Perfil.png",
+      "/images/cases/eclipse/Pesquisa.png"
     ]
   }
 ]

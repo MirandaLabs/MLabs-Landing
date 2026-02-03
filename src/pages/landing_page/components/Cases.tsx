@@ -2,7 +2,7 @@ import { ArrowRightIcon, ChevronLeftIcon, ChevronRightIcon } from 'lucide-react'
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import orkestraLogo from '@/assets/images/capabilites/Logo_Orkestra.png';
-import EclipseLogo from '@/assets/images/cases/eclipse/Landing.png';
+import EclipseLogo from '@/assets/images/cases/eclipse/Eclipse.png';
 import CLBMCS from '@/assets/images/cases/CLBMCS/Landing.png';
 import Polidisel from '@/assets/images/cases/Polidiesel/Hero.png';
 import Betania from '@/assets/images/cases/Betania/hero.png';

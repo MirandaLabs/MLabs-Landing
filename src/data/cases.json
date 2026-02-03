@@ -512,7 +512,7 @@
     "fullDescription": "Projeto da Eclipse Angels com interface dark, foco em usabilidade e organização clara das informações, além de seções de destaque, busca e painel do usuário.",
     "tags": ["UI/UX", "Web App", "Performance"],
     "results": "Publicado",
-    "image": "/images/cases/eclipse/Landing.png",
+    "image": "/images/cases/eclipse/Eclipse.png",
     "challenge": "Criar uma interface moderna e simples de navegar, com destaque para perfis e ações principais.",
     "solution": "Desenvolvemos uma experiência visual consistente, com hierarquia clara e componentes reutilizáveis para melhor navegação.",
     "technologies": [

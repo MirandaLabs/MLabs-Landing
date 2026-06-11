@@ -1,13 +1,14 @@
 {
-  "name": "Miranda Labs",
+  "name": "miranda-labs-landing-page",
   "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npx vite",
-    "build": "npx vite build",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "preview": "npx vite preview"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "typecheck": "tsc -b"
   },
   "dependencies": {
     "lucide-react": "0.522.0",

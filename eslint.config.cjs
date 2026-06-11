@@ -5,7 +5,10 @@ const reactRefreshPlugin = require('eslint-plugin-react-refresh');
 
 module.exports = [
   {
-    ignores: ['dist', 'node_modules', 'eslint.config.cjs'],
+    ignores: ['dist/**', 'node_modules/**'],
+  },
+  {
+    ignores: ['eslint.config.cjs'],
     languageOptions: {
       parser: require('@typescript-eslint/parser'),
       parserOptions: {

@@ -6,8 +6,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-[var(--brand1)] to-[var(--brand2)] rounded-lg flex items-center justify-center">
-                <img src="/src/assets/images/header/logo_miranda_labs.png" alt="Miranda Labs Logo" />
+              <div className="w-10 h-10 bg-gradient-to-br from-[var(--brand1)] to-[var(--brand2)] rounded-lg flex items-center justify-center overflow-hidden">
+                <img src="/logo_miranda_labs.png" alt="" className="h-full w-full object-cover" loading="lazy" decoding="async" />
               </div>
               <span className="text-xl font-bold text-[var(--text)]">
                 Miranda Labs
@@ -39,6 +39,12 @@ export function Footer() {
             <h4 className="text-[var(--text)] font-semibold mb-4">Empresa</h4>
             <ul className="space-y-2">
               <li>
+                <Link to="/#services" className="text-[var(--muted)] hover:text-[var(--brand1)] transition-colors text-sm">Serviços</Link>
+              </li>
+              <li>
+                <Link to="/#cases" className="text-[var(--muted)] hover:text-[var(--brand1)] transition-colors text-sm">Projetos</Link>
+              </li>
+              <li>
                 <Link to="/about" className="text-[var(--muted)] hover:text-[var(--brand1)] transition-colors text-sm">Sobre nós</Link>
               </li>
               <li>
@@ -55,11 +61,11 @@ export function Footer() {
               </li>
               <li className="flex items-start space-x-2 text-sm">
                 <PhoneIcon size={16} className="text-[var(--brand1)] mt-1 flex-shrink-0" />
-                <span className="text-[var(--muted)]">+55 71 99972-3105</span>
+                <a href="tel:+5571999723105" className="text-[var(--muted)] hover:text-[var(--brand1)] transition-colors">+55 71 99972-3105</a>
               </li>
               <li className="flex items-start space-x-2 text-sm">
                 <MailIcon size={16} className="text-[var(--brand1)] mt-1 flex-shrink-0" />
-                <span className="text-[var(--muted)]">mirandalabs.co@gmail.com</span>
+                <a href="mailto:mirandalabs.co@gmail.com" className="text-[var(--muted)] hover:text-[var(--brand1)] transition-colors">mirandalabs.co@gmail.com</a>
               </li>
             </ul>
           </div>
@@ -70,10 +76,8 @@ export function Footer() {
               © {new Date().getFullYear()} Miranda Labs. Todos os direitos reservados.
             </p>
             <p className="text-[var(--muted)] text-sm">
-                    CNPJ: 63.210.893/0001-10
-
+              CNPJ: 63.210.893/0001-10
             </p>
-           
           </div>
         </div>
       </div>

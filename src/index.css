@@ -3,7 +3,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 :root {
   --bg: #0b1220;
   --panel: #0f172a;
@@ -13,6 +12,9 @@
   --brand2: #22d3ee;
   --brand3: #f59e0b;
   --ok: #10b981;
+}
+html {
+  scroll-behavior: smooth;
 }
 * {
   margin: 0;
@@ -25,7 +27,21 @@ body {
   color: var(--text);
   overflow-x: hidden;
 }
+img {
+  max-width: 100%;
+}
+:focus-visible {
+  outline: 3px solid var(--brand2);
+  outline-offset: 3px;
+}
+::selection {
+  background: var(--brand2);
+  color: var(--bg);
+}
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;

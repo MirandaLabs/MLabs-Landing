@@ -51,6 +51,13 @@ export type ProjectCase = {
   image?: string;
   imageClass?: string;
   fallbackLabel?: string;
+  download?: {
+    href: string;
+    title: string;
+    description: string;
+    fileLabel: string;
+    ctaLabel: string;
+  };
   gallery: ProjectGalleryItem[];
 };
 
@@ -190,6 +197,14 @@ export const projectCases: ProjectCase[] = [
     ],
     image: orkestraLogo,
     imageClass: darkLogoClass,
+    download: {
+      href: '/downloads/checklist-organizacao-eventos-miranda-labs.pdf',
+      title: 'Checklist completo para organizar seu evento',
+      description:
+        'Antes de contratar, veja tudo que o Orkestra foi pensado para cobrir: venda de ingressos, PDV, estoque, equipe, permissões, consumo e visão gerencial. Baixe o PDF para entender melhor a operação que a plataforma entrega.',
+      fileLabel: 'Checklist Organização de Eventos Miranda Labs.pdf',
+      ctaLabel: 'Baixar checklist em PDF',
+    },
     gallery: [
       {
         src: orkestraLanding,

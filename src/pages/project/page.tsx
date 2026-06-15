@@ -4,6 +4,8 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
   CheckCircle2Icon,
+  DownloadIcon,
+  FileTextIcon,
   Layers3Icon,
   ShieldCheckIcon,
   TargetIcon,
@@ -184,6 +186,41 @@ export function ProjectPage() {
         </section>
 
         {project.slug === 'orkestra' && <OrkestraPreRegister />}
+
+        {project.download && (
+          <section className="bg-[var(--bg)] py-16 sm:py-20">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="grid gap-6 rounded-lg border border-[var(--brand2)]/20 bg-[var(--panel)] p-6 sm:p-8 lg:grid-cols-[1fr_auto] lg:items-center">
+                <div className="flex gap-5">
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-[var(--brand2)]/15 text-[var(--brand2)]">
+                    <FileTextIcon size={24} aria-hidden="true" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-widest text-[var(--muted)]">
+                      Material para download
+                    </p>
+                    <h2 className="mt-2 text-2xl font-bold text-[var(--text)] sm:text-3xl">
+                      {project.download.title}
+                    </h2>
+                    <p className="mt-4 max-w-3xl leading-relaxed text-[var(--muted)]">
+                      {project.download.description}
+                    </p>
+                    
+                  </div>
+                </div>
+                <a
+                  href={project.download.href}
+                  download
+                  type="application/pdf"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[var(--brand1)] to-[var(--brand2)] px-6 py-3 font-semibold text-white transition-all hover:shadow-lg"
+                >
+                  {project.download.ctaLabel}
+                  <DownloadIcon size={18} aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+          </section>
+        )}
 
         <section className="py-16 sm:py-20">
           <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 md:grid-cols-2 lg:px-8">

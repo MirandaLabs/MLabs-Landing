@@ -151,7 +151,7 @@ export function AboutPage() {
                 Solicitar orçamento
               </Link>
               <Link
-                to="/#cases"
+                to="/#projetos"
                 className="inline-flex justify-center rounded-lg border border-[var(--muted)]/30 px-6 py-3 font-semibold text-[var(--text)] transition-colors hover:border-[var(--brand2)] hover:bg-[var(--brand2)]/5"
               >
                 Ver projetos

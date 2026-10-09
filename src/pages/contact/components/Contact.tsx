@@ -40,9 +40,9 @@ export function Contact() {
   return <section id="contact" className="scroll-mt-24 py-20 sm:py-32 bg-[var(--panel)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[var(--text)]">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[var(--text)]">
             Vamos Conversar?
-          </h2>
+          </h1>
           <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">
             Conte-nos sobre seu projeto e descubra como podemos ajudar
           </p>
@@ -114,7 +114,7 @@ export function Contact() {
             </div>
             <div className="bg-gradient-to-br from-[var(--brand1)]/10 via-[var(--brand2)]/10 to-[var(--brand3)]/10 rounded-lg p-8 border border-[var(--brand1)]/20">
               <h3 className="text-xl font-bold text-[var(--text)] mb-4">
-                Resposta em até 24h
+                Vamos entender o seu problema
               </h3>
               <p className="text-[var(--muted)]">
                 Nossa equipe está pronta para entender suas necessidades e

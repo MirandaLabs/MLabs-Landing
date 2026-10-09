@@ -1,157 +1,70 @@
-import { ArrowRightIcon } from 'lucide-react';
+import { ArrowRightIcon, ExternalLinkIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { projectCases, type ProjectCase } from '../../../data/projects';
+import { OptimizedImage } from '../../../utils/imageOptimizer';
+import { getProjectBySlug } from '../../../data/projects';
+import { projectsSection } from '../../../data/home';
 
-const FEATURED_SLUG = 'eclipse';
-
-function ProjectLogoBadge({ project, size }: { project: ProjectCase; size: 'lg' | 'sm' }) {
-  if (!project.image) return null;
-  const containerClass =
-    size === 'lg'
-      ? 'absolute left-5 top-5 z-10 flex h-14 w-40 items-center justify-center rounded-lg border border-white/15 bg-white/95 p-3 shadow-2xl'
-      : 'absolute left-4 top-4 z-10 flex h-11 w-32 items-center justify-center rounded-lg border border-white/15 bg-white/95 p-2 shadow-xl';
-  const imgClass = size === 'lg' ? 'max-h-9 max-w-32 object-contain' : 'max-h-7 max-w-24 object-contain';
-  return (
-    <div className={containerClass}>
-      <img src={project.image} alt={`Logo ${project.title}`} className={imgClass} loading="lazy" decoding="async" />
-    </div>
-  );
-}
-
-function ProjectVisual({ project, aspect }: { project: ProjectCase; aspect: string }) {
-  const visualSrc = project.gallery[0]?.src ?? project.image;
-  const visualAlt = project.gallery[0]?.alt ?? project.title;
-  return (
-    <div className={`relative ${aspect} overflow-hidden bg-[var(--bg)]`}>
-      {visualSrc ? (
-        <img
-          src={visualSrc}
-          alt={visualAlt}
-          className="h-full w-full object-cover object-top"
-          loading="lazy"
-          decoding="async"
-        />
-      ) : (
-        <div className="flex h-full w-full items-center justify-center bg-[var(--panel)]">
-          <span className="text-3xl font-bold text-[var(--text)]">{project.fallbackLabel ?? project.title}</span>
-        </div>
-      )}
-    </div>
-  );
-}
+// A home mostra apenas o CLBMCS nesta versão (contrato de escopo, decisão D7).
+const FEATURED_SLUG = 'clbmcs';
 
 export function Cases() {
-  const featured = projectCases.find((p) => p.slug === FEATURED_SLUG) ?? projectCases[0];
-  const others = projectCases.filter((p) => p.slug !== featured.slug);
+  const project = getProjectBySlug(FEATURED_SLUG);
+  if (!project) return null;
 
   return (
-    <section id="cases" className="scroll-mt-24 bg-[var(--bg)] py-20 sm:py-32">
+    <section id="projetos" className="scroll-mt-24 bg-[var(--bg)] py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-12 max-w-2xl">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[var(--brand2)]">Portfólio</p>
-          <h2 className="mb-4 text-3xl font-bold text-[var(--text)] sm:text-4xl md:text-5xl">
-            Projetos em desenvolvimento
-          </h2>
-          <p className="text-lg text-[var(--muted)]">
-            Cada projeto documenta arquitetura, decisões técnicas e o estágio atual — do conceito à entrega.
-          </p>
-        </div>
+        <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[var(--brand2)]">Projetos publicados</p>
+        <h2 className="mb-12 max-w-3xl text-3xl font-bold leading-tight text-[var(--text)] sm:text-4xl md:text-5xl">
+          {projectsSection.title}
+        </h2>
 
-        <article className="mb-6 grid overflow-hidden rounded-2xl border border-[var(--muted)]/10 bg-[var(--panel)] shadow-2xl lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="relative">
-            <ProjectVisual project={featured} aspect="aspect-[16/10] lg:aspect-auto lg:h-full lg:min-h-[420px]" />
-            <ProjectLogoBadge project={featured} size="lg" />
+        <article className="grid overflow-hidden rounded-lg border border-[var(--muted)]/15 bg-[var(--panel)] lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="bg-[var(--bg)]">
+            <OptimizedImage
+              src="/images/optimized/assets/projects/clbmcs/home"
+              extension="webp"
+              alt="Página inicial do portal do CLBMCS 2026"
+              width={1600}
+              height={860}
+              decoding="async"
+              className="block h-auto w-full"
+            />
           </div>
-          <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
-            <div className="mb-4 flex flex-wrap gap-2">
-              {featured.tags.slice(0, 4).map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-md bg-[var(--brand1)]/15 px-2.5 py-1 text-xs font-semibold text-[var(--brand1)]"
-                >
-                  {tag}
-                </span>
+          <div className="flex flex-col justify-center p-6 sm:p-10">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-[var(--muted)]">Publicado · Edição 2026</p>
+            <h3 className="text-3xl font-extrabold leading-tight text-[var(--text)] sm:text-4xl">{project.title}</h3>
+            <p className="mt-4 text-lg leading-relaxed text-[var(--muted)]">{projectsSection.framing}</p>
+            <ul className="mt-6 space-y-2 text-[var(--text)]/90">
+              {projectsSection.results.map((result) => (
+                <li key={result} className="flex gap-3">
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[var(--brand2)]" aria-hidden="true" />
+                  <span>{result}</span>
+                </li>
               ))}
-            </div>
-            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-[var(--muted)]">
-              {featured.eyebrow}
-            </p>
-            <h3 className="text-3xl font-extrabold leading-tight text-[var(--text)] sm:text-4xl">
-              {featured.title}
-            </h3>
-            <p className="mt-4 text-base leading-relaxed text-[var(--muted)] sm:text-lg">
-              {featured.cardDescription}
-            </p>
-            <div className="mt-6 grid gap-3 sm:grid-cols-3">
-              {featured.stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="min-w-0 rounded-lg border border-[var(--muted)]/10 bg-[var(--bg)]/70 p-3"
-                >
-                  <p className="truncate text-lg font-bold text-[var(--text)]" title={stat.value}>
-                    {stat.value}
-                  </p>
-                  <p className="mt-0.5 truncate text-xs text-[var(--muted)]" title={stat.label}>
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-[var(--muted)]/10 pt-5">
-              <span className="text-sm font-semibold text-[var(--brand2)]">{featured.status}</span>
+            </ul>
+            <p className="mt-6 text-sm leading-relaxed text-[var(--muted)]">{projectsSection.role}</p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
-                to={`/projetos/${featured.slug}`}
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--text)] transition-colors hover:text-[var(--brand2)]"
-                aria-label={`Ver projeto ${featured.title}`}
+                to={`/projetos/${project.slug}`}
+                className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-lg bg-[var(--text)] px-6 py-3 font-semibold text-[var(--bg)] transition-colors hover:bg-[var(--brand2)]"
               >
                 Ver projeto
-                <ArrowRightIcon size={16} aria-hidden="true" />
+                <ArrowRightIcon size={18} aria-hidden="true" />
               </Link>
+              <a
+                href={projectsSection.siteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-lg border border-[var(--muted)]/30 px-6 py-3 font-semibold text-[var(--text)] transition-colors hover:border-[var(--brand2)]"
+              >
+                Visitar o site publicado
+                <ExternalLinkIcon size={16} aria-hidden="true" />
+                <span className="sr-only">(abre em nova aba)</span>
+              </a>
             </div>
           </div>
         </article>
-
-        <div className="grid gap-6 md:grid-cols-2">
-          {others.map((project) => (
-            <article
-              key={project.slug}
-              className="flex flex-col overflow-hidden rounded-2xl border border-[var(--muted)]/10 bg-[var(--panel)] transition-all hover:border-[var(--brand2)]/40 hover:shadow-xl"
-            >
-              <div className="relative">
-                <ProjectVisual project={project} aspect="aspect-[16/9]" />
-                <ProjectLogoBadge project={project} size="sm" />
-              </div>
-              <div className="flex flex-1 flex-col p-6">
-                <div className="mb-3 flex flex-wrap gap-2">
-                  {project.tags.slice(0, 3).map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-md bg-[var(--brand1)]/12 px-2 py-0.5 text-xs font-medium text-[var(--brand1)]"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-[var(--muted)]">
-                  {project.eyebrow}
-                </p>
-                <h3 className="text-2xl font-bold text-[var(--text)]">{project.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-[var(--muted)]">{project.cardDescription}</p>
-                <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-[var(--muted)]/10 pt-4">
-                  <span className="text-xs font-semibold text-[var(--brand2)]">{project.status}</span>
-                  <Link
-                    to={`/projetos/${project.slug}`}
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--text)] transition-colors hover:text-[var(--brand2)]"
-                    aria-label={`Ver projeto ${project.title}`}
-                  >
-                    Ver projeto
-                    <ArrowRightIcon size={14} aria-hidden="true" />
-                  </Link>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
       </div>
     </section>
   );

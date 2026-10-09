@@ -66,7 +66,7 @@ export function ProjectPage() {
   };
 
   if (!project) {
-    return <Navigate to="/#cases" replace />;
+    return <Navigate to="/#projetos" replace />;
   }
 
   return (
@@ -111,7 +111,7 @@ export function ProjectPage() {
                 '@type': 'ListItem',
                 position: 2,
                 name: 'Projetos',
-                item: 'https://www.mirandalabs.com.br/#cases',
+                item: 'https://www.mirandalabs.com.br/#projetos',
               },
               {
                 '@type': 'ListItem',
@@ -128,7 +128,7 @@ export function ProjectPage() {
         <section className="bg-[var(--panel)] py-12 sm:py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Link
-              to="/#cases"
+              to="/#projetos"
               className="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-[var(--brand2)] transition-colors hover:text-[var(--text)]"
             >
               <ArrowLeftIcon size={16} aria-hidden="true" />

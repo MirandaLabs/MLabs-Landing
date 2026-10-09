@@ -1,13 +1,16 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { MenuIcon, XIcon } from 'lucide-react';
+import { MenuIcon, MessageCircleIcon, XIcon } from 'lucide-react';
+import { whatsappLink, whatsappMessages } from '../data/contact';
 
 const navItems = [
-  { label: 'Serviços', to: '/#services' },
-  { label: 'Capacidades', to: '/#capabilities' },
-  { label: 'Projetos', to: '/#cases' },
-  { label: 'Sobre nós', to: '/about' },
+  { label: 'Software sob medida', to: '/#software-sob-medida' },
+  { label: 'Produtos', to: '/#produtos' },
+  { label: 'Projetos', to: '/#projetos' },
+  { label: 'Equipe', to: '/#equipe' },
 ];
+
+const whatsappHref = whatsappLink(whatsappMessages.general);
 
 export function Header() {
   const { pathname } = useLocation();
@@ -43,13 +46,15 @@ export function Header() {
           </Link>
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Link key={item.to} to={item.to} className="text-[var(--muted)] hover:text-[var(--text)] transition-colors font-medium">
+              <Link key={item.to} to={item.to} className="inline-flex min-h-[44px] items-center text-[var(--muted)] hover:text-[var(--text)] transition-colors font-medium">
                 {item.label}
               </Link>
             ))}
-            <Link to="/contato" className="px-5 py-2 bg-[var(--text)] text-[var(--bg)] rounded-lg font-semibold transition-colors hover:bg-[var(--brand2)] hover:text-[var(--bg)]">
-              Contato
-            </Link>
+            <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2 min-h-[44px] bg-[var(--text)] text-[var(--bg)] rounded-lg font-semibold transition-colors hover:bg-[var(--brand2)] hover:text-[var(--bg)]">
+              <MessageCircleIcon size={18} aria-hidden="true" />
+              Conversar no WhatsApp
+              <span className="sr-only">(abre em nova aba)</span>
+            </a>
           </nav>
           <button
             type="button"
@@ -66,13 +71,15 @@ export function Header() {
       {isMobileMenuOpen && <div id="mobile-menu" className="md:hidden bg-[var(--panel)] border-t border-[var(--muted)]/20">
           <nav className="flex flex-col space-y-4 px-4 py-6">
             {navItems.map((item) => (
-              <Link key={item.to} to={item.to} onClick={() => setIsMobileMenuOpen(false)} className="text-[var(--muted)] hover:text-[var(--text)] transition-colors font-medium text-left">
+              <Link key={item.to} to={item.to} onClick={() => setIsMobileMenuOpen(false)} className="inline-flex min-h-[44px] items-center text-[var(--muted)] hover:text-[var(--text)] transition-colors font-medium text-left">
                 {item.label}
               </Link>
             ))}
-            <Link to="/contato" onClick={() => setIsMobileMenuOpen(false)} className="px-6 py-3 bg-[var(--text)] text-[var(--bg)] rounded-lg font-semibold text-left">
-              Contato
-            </Link>
+            <a href={whatsappHref} target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="inline-flex items-center gap-2 px-6 py-3 min-h-[44px] bg-[var(--text)] text-[var(--bg)] rounded-lg font-semibold text-left">
+              <MessageCircleIcon size={18} aria-hidden="true" />
+              Conversar no WhatsApp
+              <span className="sr-only">(abre em nova aba)</span>
+            </a>
           </nav>
         </div>}
     </header>;

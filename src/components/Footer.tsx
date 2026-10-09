@@ -7,8 +7,7 @@ export function Footer() {
           <div>
             <img src="/logo_miranda_labs_horizontal.png" alt="Miranda Labs" width={561} height={192} className="mb-4 h-14 w-auto" loading="lazy" decoding="async" />
             <p className="text-[var(--muted)] text-sm leading-relaxed">
-              Engenharia de software e design de produto para empresas que
-              querem escalar
+              Software sob medida e produtos digitais para pequenas empresas.
             </p>
           </div>
           <div>
@@ -32,10 +31,13 @@ export function Footer() {
             <h4 className="text-[var(--text)] font-semibold mb-4">Empresa</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/#services" className="text-[var(--muted)] hover:text-[var(--brand1)] transition-colors text-sm">Serviços</Link>
+                <Link to="/#software-sob-medida" className="text-[var(--muted)] hover:text-[var(--brand1)] transition-colors text-sm">Software sob medida</Link>
               </li>
               <li>
-                <Link to="/#cases" className="text-[var(--muted)] hover:text-[var(--brand1)] transition-colors text-sm">Projetos</Link>
+                <Link to="/produtos" className="text-[var(--muted)] hover:text-[var(--brand1)] transition-colors text-sm">Produtos</Link>
+              </li>
+              <li>
+                <Link to="/#projetos" className="text-[var(--muted)] hover:text-[var(--brand1)] transition-colors text-sm">Projetos</Link>
               </li>
               <li>
                 <Link to="/about" className="text-[var(--muted)] hover:text-[var(--brand1)] transition-colors text-sm">Sobre nós</Link>

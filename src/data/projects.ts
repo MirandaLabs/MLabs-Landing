@@ -1,7 +1,3 @@
-import cardapioClientDashboard from '../assets/images/projects/Cardapio/Daashboard_Cliente.png';
-import cardapioStoreDashboard from '../assets/images/projects/Cardapio/Daashboard_Loja.png';
-import cardapioLanding from '../assets/images/projects/Cardapio/Landing.png';
-import cardapioLogo from '../assets/images/projects/Cardapio/Logo.png';
 import clbmcsHome from '../assets/images/projects/Clbmcs/Captura de tela 2026-06-09 231511.png';
 import clbmcsInnovation from '../assets/images/projects/Clbmcs/Captura de tela 2026-06-09 231557.png';
 import clbmcsSpeakers from '../assets/images/projects/Clbmcs/Captura de tela 2026-06-09 231640.png';
@@ -150,7 +146,7 @@ export const projectCases: ProjectCase[] = [
     cardDescription:
       'Plataforma de eventos com venda de ingressos, carteira do participante, PDV, estoque, colaboradores, permissões e analytics financeiros.',
     summary:
-      'O Orkestra foi analisado a partir da pasta orkestra_front. A aplicação possui landing para cliente e gestor, autenticação por perfil e três áreas operacionais: participante, organizador e operador de PDV.',
+      'A aplicação possui landing para cliente e gestor, autenticação por perfil e três áreas operacionais: participante, organizador e operador de PDV.',
     challenge:
       'Centralizar a operação de eventos, conectando ingresso, consumo, saldo, equipe, estoque e visão gerencial sem fragmentar a jornada entre ferramentas diferentes.',
     solution:
@@ -224,85 +220,11 @@ export const projectCases: ProjectCase[] = [
     ],
   },
   {
-    slug: 'cardapio',
-    title: 'Qomanda',
-    eyebrow: 'Cardápio QR + delivery',
-    type: 'API e aplicação web',
-    status: 'API operacional',
-    cardDescription:
-      'Sistema de pedidos para restaurantes com cardápio digital via QR code, delivery, catálogo de produtos, pedidos, entregadores e painel da empresa.',
-    summary:
-      'O projeto cardapio_online implementa uma base para delivery e cardápio digital via QR code. A API cobre empresas, clientes, produtos, categorias, pedidos, entregas, entregadores, notificações e avaliações.',
-    challenge:
-      'Montar um fluxo completo de pedido para restaurante, conectando cardápio, autenticação, pedido, preparo, entrega, atraso e comunicação com o cliente.',
-    solution:
-      'A aplicação combina API REST, Entity Framework, banco PostgreSQL/SQLite, autenticação JWT, RabbitMQ com fallback local e serviço em background para monitorar pedidos atrasados.',
-    tags: ['.NET', 'PostgreSQL', 'RabbitMQ', 'JWT'],
-    stats: [
-      { label: 'Domínios da API', value: '9 controladores' },
-      { label: 'Pedido', value: '8 status' },
-      { label: 'Operação', value: 'Mensageria + health' },
-    ],
-    modules: [
-      {
-        title: 'Empresas e clientes',
-        description:
-          'Cadastro, login com JWT, resposta segura sem senha e separação de dados por empresa autenticada.',
-      },
-      {
-        title: 'Cardápio digital',
-        description:
-          'Produtos, categorias e associação por empresa para compor o cardápio exibido ao cliente.',
-      },
-      {
-        title: 'Pedidos e pagamentos',
-        description:
-          'Criação de pedidos com itens, pagamento, histórico, atualização de status e vínculo com entrega.',
-      },
-      {
-        title: 'Entregas e entregadores',
-        description:
-          'Cadastro de entregadores, atribuição ao pedido, status de entrega e localização de rastreamento.',
-      },
-      {
-        title: 'Notificações',
-        description:
-          'Publicação de mensagens no RabbitMQ, consumidor em background e fallback simulado para desenvolvimento local.',
-      },
-    ],
-    stack: ['.NET 10', 'Entity Framework Core', 'PostgreSQL', 'SQLite', 'RabbitMQ', 'Swagger', 'Docker'],
-    technical: [
-      'Health check em `/health` com verificação do contexto de banco.',
-      'Swagger habilitado em desenvolvimento para inspeção dos contratos.',
-      'Serviço `OrderTimeoutService` para monitoramento automático de atrasos, com filas RabbitMQ dedicadas (`notifications`, `order_status`) e fallback `FakeMessageBusService` quando o broker está indisponível.',
-      'Multi-tenancy por `CompanyId`, validada por testes de isolamento de dados entre empresas (`MultiTenancyTests`).',
-    ],
-    image: cardapioLogo,
-    imageClass: lightLogoClass,
-    gallery: [
-      {
-        src: cardapioLanding,
-        alt: 'Landing do Qomanda',
-        caption: 'Landing comercial com proposta de cardápio QR, pedidos em tempo real, delivery próprio e acessos por perfil.',
-      },
-      {
-        src: cardapioStoreDashboard,
-        alt: 'Painel da empresa no Qomanda',
-        caption: 'Painel operacional da empresa para catálogo de produtos, categorias, entregadores, avaliações e API.',
-      },
-      {
-        src: cardapioClientDashboard,
-        alt: 'Área do cliente no Qomanda',
-        caption: 'Experiência do cliente com segmentos, lojas disponíveis, pedido pelo cardápio e navegação por conta.',
-      },
-    ],
-  },
-  {
     slug: 'nutripro',
     title: 'NutriPro',
     eyebrow: 'SaaS para nutricionistas',
     type: 'Produto SaaS e arquitetura cloud',
-    status: 'Arquitetura planejada',
+    status: 'Em implantação',
     cardDescription:
       'SaaS multi-tenant para nutricionistas e clínicas, com jornada do paciente, planos alimentares, agenda online, automações no WhatsApp, inventário de suplementos, analytics e infraestrutura pensada para LGPD.',
     summary:
@@ -314,7 +236,7 @@ export const projectCases: ProjectCase[] = [
     tags: ['Next.js', 'SaaS', 'LGPD', 'WhatsApp'],
     stats: [
       { label: 'Arquitetura', value: 'Multi-tenant' },
-      { label: 'Conformidade', value: 'LGPD-ready' },
+      { label: 'Formato', value: 'Assinatura mensal' },
       { label: 'Stack de infra', value: 'VPS + R2 + WAHA' },
     ],
     modules: [
@@ -390,7 +312,7 @@ export const projectCases: ProjectCase[] = [
     cardDescription:
       'Site do 6º Congresso Luso-Brasileiro de Materiais de Construção Sustentáveis, com programação, inscrição, palestrantes e submissão.',
     summary:
-      'O CLBMCS foi analisado na branch feature do Site_CLBMCS_2026. O portal apresenta o congresso de 2026 em Fortaleza, organiza conteúdo científico e apoia a jornada de inscrição, submissão e consulta de informações do evento.',
+      'O portal apresenta o congresso de 2026 em Fortaleza, organiza conteúdo científico e apoia a jornada de inscrição, submissão e consulta de informações do evento.',
     challenge:
       'Transformar um evento científico com muitas frentes de informação em uma navegação simples para participantes, autores, patrocinadores e comissão organizadora.',
     solution:
@@ -431,7 +353,7 @@ export const projectCases: ProjectCase[] = [
     stack: ['React', 'TypeScript', 'Vite', 'React Router', 'CSS Modules', 'Vitest', 'EmailJS', 'axios', 'Embla Carousel'],
     technical: [
       'Rotas organizadas em arquivo dedicado com React Router (12 rotas), com deploy configurado para Vercel e Netlify e fallback SPA.',
-      'Dados estruturados para 9 eixos temáticos, 11 palestrantes internacionais (Brasil/Portugal) e tabela de inscrição por categoria e período (R$ 400-990).',
+      'Dados estruturados para 9 eixos temáticos, 11 palestrantes internacionais (Brasil/Portugal) e tabela de inscrição por categoria e período.',
       'Inscrição e submissão integradas à plataforma Even3, com prazos de envio de resumos até 28/02 e de artigos finais até 31/07/2026.',
       'Formulário de contato via EmailJS, requisições HTTP com axios e carrossel de palestrantes com Embla Carousel.',
     ],

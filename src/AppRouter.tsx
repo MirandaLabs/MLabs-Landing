@@ -4,6 +4,7 @@ import { App } from './pages/landing_page/App';
 import { AboutPage } from './pages/about/page';
 import { ContactPage } from './pages/contact/page';
 import { ProjectPage } from './pages/project/page';
+import { ProductsPage } from './pages/products/page';
 
 function ScrollManager() {
   const { hash, pathname } = useLocation();
@@ -16,7 +17,12 @@ function ScrollManager() {
 
     const targetId = decodeURIComponent(hash.slice(1));
     window.setTimeout(() => {
-      document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+      const target = document.getElementById(targetId);
+      if (!target) return;
+      target.scrollIntoView({ behavior: 'smooth' });
+      // Move o foco para a seção, para teclado e leitor de tela seguirem a âncora.
+      if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+      target.focus({ preventScroll: true });
     }, 0);
   }, [hash, pathname]);
 
@@ -31,6 +37,7 @@ export function AppRouter() {
         <Route path="/" element={<App />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contato" element={<ContactPage />} />
+        <Route path="/produtos" element={<ProductsPage />} />
         <Route path="/projetos/:slug" element={<ProjectPage />} />
       </Routes>
     </BrowserRouter>

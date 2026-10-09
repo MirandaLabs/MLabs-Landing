@@ -97,7 +97,7 @@ export function CaseDetailsPage() {
               Case não encontrado
             </h1>
             <Link
-              to="/#cases"
+              to="/#projetos"
               className="inline-flex items-center space-x-2 text-[var(--brand1)] hover:text-[var(--brand2)] transition-colors"
             >
               <ArrowLeftIcon size={20} />
@@ -122,7 +122,7 @@ export function CaseDetailsPage() {
       <section className="relative pt-24 pb-12 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
-            to="/#cases"
+            to="/#projetos"
             className="inline-flex items-center space-x-2 text-[var(--brand1)] hover:text-[var(--brand2)] transition-colors mb-8"
           >
             <ArrowLeftIcon size={20} />
@@ -363,7 +363,7 @@ export function CaseDetailsPage() {
               Fale Conosco
             </Link>
             <Link
-              to="/#cases"
+              to="/#projetos"
               className="px-8 py-4 bg-[var(--panel)] text-[var(--text)] rounded-lg font-semibold hover:bg-[var(--muted)]/10 transition-colors border border-[var(--muted)]/20"
             >
               Ver Mais Cases

@@ -1,6 +1,5 @@
 import { ArrowRightIcon, ExternalLinkIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { OptimizedImage } from '../../../utils/imageOptimizer';
 import { getProjectBySlug } from '../../../data/projects';
 import { projectsSection } from '../../../data/home';
 
@@ -19,19 +18,8 @@ export function Cases() {
           {projectsSection.title}
         </h2>
 
-        <article className="grid overflow-hidden rounded-lg border border-[var(--muted)]/15 bg-[var(--panel)] lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="bg-[var(--bg)]">
-            <OptimizedImage
-              src="/images/optimized/assets/projects/clbmcs/home"
-              extension="webp"
-              alt="Página inicial do portal do CLBMCS 2026"
-              width={1600}
-              height={860}
-              decoding="async"
-              className="block h-auto w-full"
-            />
-          </div>
-          <div className="flex flex-col justify-center p-6 sm:p-10">
+        <article className="overflow-hidden rounded-lg border border-[var(--muted)]/15 bg-[var(--panel)]">
+          <div className="flex max-w-3xl flex-col justify-center p-6 sm:p-10">
             <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-[var(--muted)]">Publicado · Edição 2026</p>
             <h3 className="text-3xl font-extrabold leading-tight text-[var(--text)] sm:text-4xl">{project.title}</h3>
             <p className="mt-4 text-lg leading-relaxed text-[var(--muted)]">{projectsSection.framing}</p>

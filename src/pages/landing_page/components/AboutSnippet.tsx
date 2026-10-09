@@ -5,9 +5,10 @@ export function AboutSnippet() {
     <section id="equipe" className="scroll-mt-24 bg-[var(--bg)] py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[var(--brand2)]">Equipe</p>
-        <h2 className="mb-12 max-w-3xl text-3xl font-bold leading-tight text-[var(--text)] sm:text-4xl md:text-5xl">
+        <h2 className="mb-4 max-w-3xl text-3xl font-bold leading-tight text-[var(--text)] sm:text-4xl md:text-5xl">
           {team.title}
         </h2>
+        <p className="mb-12 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">{team.lead}</p>
 
         <ul className="grid gap-px overflow-hidden rounded-lg border border-[var(--muted)]/15 bg-[var(--muted)]/10 md:grid-cols-3">
           {team.members.map((member) => (

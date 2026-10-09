@@ -10,7 +10,6 @@ export const hero = {
   primaryCta: 'Explicar meu projeto no WhatsApp',
   secondaryCta: 'Ver projetos publicados',
   trustLine: 'Código-fonte, documentação, testes, deploy e suporte definidos em contrato.',
-  imageAlt: 'Página inicial do portal do CLBMCS 2026, projeto publicado pela Miranda Labs',
 };
 
 export const facts = [
@@ -76,7 +75,8 @@ export const productsSection = {
 };
 
 export const team = {
-  title: 'Quem conversa com você também participa da entrega.',
+  title: 'Quem está à frente da empresa',
+  lead: 'À frente da empresa, cada sócio atua em sua área.',
   members: [
     {
       name: 'Arthur Miranda',

@@ -1,6 +1,9 @@
-// Tailwind config: improved content paths, dark mode and small theme extensions
+// Tailwind config. As cores vêm dos tokens de src/index.css (paleta oficial) e aceitam
+// transparência (ex.: border-soft/15, bg-link/15), o que `[var(--x)]/15` não permite.
 import typography from '@tailwindcss/typography'
 import forms from '@tailwindcss/forms'
+
+const withAlpha = (token) => `color-mix(in srgb, var(${token}) calc(<alpha-value> * 100%), transparent)`
 
 export default {
   content: [
@@ -12,20 +15,18 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
-      // Example brand color scale for MLabs — adjust to your design tokens
       colors: {
-        mlabs: {
-          50: '#f5f7ff',
-          100: '#e6edff',
-          200: '#c7d6ff',
-          300: '#98b6ff',
-          400: '#5f86ff',
-          500: '#2a5cff',
-          600: '#234ed6',
-          700: '#183bb0',
-          800: '#112a80',
-          900: '#081a4d'
-        }
+        ink: withAlpha('--ink'),
+        mineral: withAlpha('--mineral'),
+        action: withAlpha('--action'),
+        alert: withAlpha('--alert'),
+        link: withAlpha('--link'),
+        soft: withAlpha('--muted'),
+        surface: withAlpha('--panel')
+      },
+      // Borda padrão (quando só `border` é usado): sem o cinza claro do Tailwind.
+      borderColor: {
+        DEFAULT: withAlpha('--muted')
       },
       fontFamily: {
 

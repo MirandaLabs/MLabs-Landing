@@ -29,11 +29,11 @@ export function Header() {
 
   const isHome = pathname === '/';
   const headerClass = isScrolled || !isHome
-    ? 'bg-[var(--panel)]/95 shadow-lg backdrop-blur-md border-b border-[var(--muted)]/10'
-    : 'bg-[var(--bg)]/25 backdrop-blur-sm';
+    ? 'bg-surface/95 shadow-lg backdrop-blur-md border-b border-soft/10'
+    : 'bg-ink/25 backdrop-blur-sm';
 
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${headerClass}`}>
-      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-[var(--brand2)] focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-[var(--bg)]">
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-[var(--link)] focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-[var(--bg)]">
         Pular para o conteúdo
       </a>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,7 +50,7 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2 min-h-[44px] bg-[var(--text)] text-[var(--bg)] rounded-lg font-semibold transition-colors hover:bg-[var(--brand2)] hover:text-[var(--bg)]">
+            <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2 min-h-[44px] bg-[var(--text)] text-[var(--bg)] rounded-lg font-semibold transition-colors hover:bg-[var(--link)] hover:text-[var(--bg)]">
               <MessageCircleIcon size={18} aria-hidden="true" />
               Conversar no WhatsApp
               <span className="sr-only">(abre em nova aba)</span>
@@ -68,7 +68,7 @@ export function Header() {
           </button>
         </div>
       </div>
-      {isMobileMenuOpen && <div id="mobile-menu" className="md:hidden bg-[var(--panel)] border-t border-[var(--muted)]/20">
+      {isMobileMenuOpen && <div id="mobile-menu" className="md:hidden bg-[var(--panel)] border-t border-soft/20">
           <nav className="flex flex-col space-y-4 px-4 py-6">
             {navItems.map((item) => (
               <Link key={item.to} to={item.to} onClick={() => setIsMobileMenuOpen(false)} className="inline-flex min-h-[44px] items-center text-[var(--muted)] hover:text-[var(--text)] transition-colors font-medium text-left">

@@ -98,7 +98,7 @@ export function CaseDetailsPage() {
             </h1>
             <Link
               to="/#projetos"
-              className="inline-flex items-center space-x-2 text-[var(--brand1)] hover:text-[var(--brand2)] transition-colors"
+              className="inline-flex items-center space-x-2 text-[var(--link)] hover:text-[var(--link)] transition-colors"
             >
               <ArrowLeftIcon size={20} />
               <span>Voltar para cases</span>
@@ -123,7 +123,7 @@ export function CaseDetailsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             to="/#projetos"
-            className="inline-flex items-center space-x-2 text-[var(--brand1)] hover:text-[var(--brand2)] transition-colors mb-8"
+            className="inline-flex items-center space-x-2 text-[var(--link)] hover:text-[var(--link)] transition-colors mb-8"
           >
             <ArrowLeftIcon size={20} />
             <span>Voltar para cases</span>
@@ -135,7 +135,7 @@ export function CaseDetailsPage() {
                 {caseData.tags.map((tag, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-[var(--brand1)]/20 text-[var(--brand1)] text-sm font-medium rounded-full"
+                    className="px-3 py-1 bg-link/20 text-[var(--link)] text-sm font-medium rounded-full"
                   >
                     {tag}
                   </span>
@@ -144,7 +144,7 @@ export function CaseDetailsPage() {
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-[var(--text)]">
                 {caseData.title}
               </h1>
-              <p className="text-xl text-[var(--brand2)] mb-6">
+              <p className="text-xl text-[var(--link)] mb-6">
                 {caseData.subtitle}
               </p>
               <p className="text-lg text-[var(--muted)] leading-relaxed">
@@ -156,7 +156,7 @@ export function CaseDetailsPage() {
                     href={caseData.website}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center px-6 py-3 bg-[var(--brand1)] text-white rounded-lg font-semibold hover:bg-[var(--brand2)] transition-colors shadow-lg hover:shadow-xl"
+                    className="inline-flex items-center px-6 py-3 bg-[var(--action)] text-[var(--ink)] rounded-lg font-semibold hover:bg-[var(--text)] transition-colors shadow-lg hover:shadow-xl"
                   >
                     Visitar site
                   </a>
@@ -183,7 +183,7 @@ export function CaseDetailsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {caseData.metrics.map((metric, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl sm:text-5xl font-bold text-[var(--brand1)] mb-2">
+                <div className="text-4xl sm:text-5xl font-bold text-[var(--link)] mb-2">
                   {metric.value}
                 </div>
                 <div className="text-[var(--muted)] font-medium">
@@ -199,7 +199,7 @@ export function CaseDetailsPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
-            <div className="bg-[var(--panel)] rounded-2xl p-8 border border-[var(--muted)]/10">
+            <div className="bg-[var(--panel)] rounded-2xl p-8 border border-soft/10">
               <h2 className="text-3xl font-bold mb-6 text-[var(--text)]">
                 O Desafio
               </h2>
@@ -208,7 +208,7 @@ export function CaseDetailsPage() {
               </p>
             </div>
 
-            <div className="bg-[var(--panel)] rounded-2xl p-8 border border-[var(--muted)]/10">
+            <div className="bg-[var(--panel)] rounded-2xl p-8 border border-soft/10">
               <h2 className="text-3xl font-bold mb-6 text-[var(--text)]">
                 A Solução
               </h2>
@@ -233,7 +233,7 @@ export function CaseDetailsPage() {
             {caseData.technologies.map((tech, index) => (
               <div
                 key={index}
-                className="bg-[var(--bg)] rounded-xl p-6 border border-[var(--muted)]/10 hover:border-[var(--brand1)]/30 transition-colors"
+                className="bg-[var(--bg)] rounded-xl p-6 border border-soft/10 hover:border-link/30 transition-colors"
               >
                 <h3 className="text-xl font-bold mb-2 text-[var(--text)]">
                   {tech.name}
@@ -255,11 +255,11 @@ export function CaseDetailsPage() {
             {caseData.features.map((feature, index) => (
               <div
                 key={index}
-                className="flex items-start space-x-3 bg-[var(--panel)] rounded-xl p-6 border border-[var(--muted)]/10"
+                className="flex items-start space-x-3 bg-[var(--panel)] rounded-xl p-6 border border-soft/10"
               >
                 <CheckCircleIcon
                   size={24}
-                  className="text-[var(--brand1)] flex-shrink-0 mt-1"
+                  className="text-[var(--link)] flex-shrink-0 mt-1"
                 />
                 <span className="text-[var(--text)] leading-relaxed">
                   {feature}
@@ -299,7 +299,7 @@ export function CaseDetailsPage() {
       {/* Lightbox Overlay */}
       {lightboxIndex !== null && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-ink/90 backdrop-blur-sm p-4"
           onClick={closeLightbox}
           aria-modal="true"
           role="dialog"
@@ -310,7 +310,7 @@ export function CaseDetailsPage() {
           >
             <button
               onClick={closeLightbox}
-              className="absolute top-2 right-2 px-3 py-2 rounded-md bg-white/10 hover:bg-white/20 text-white text-sm font-medium backdrop-blur-md"
+              className="absolute top-2 right-2 px-3 py-2 rounded-md bg-mineral/10 hover:bg-mineral/20 text-[var(--text)] text-sm font-medium backdrop-blur-md"
               aria-label="Fechar"
             >
               Fechar
@@ -319,14 +319,14 @@ export function CaseDetailsPage() {
               <>
                 <button
                   onClick={() => setLightboxIndex((prev) => prev === null ? prev : (prev - 1 + galleryImages.length) % galleryImages.length)}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 px-3 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 px-3 py-2 rounded-full bg-mineral/10 hover:bg-mineral/20 text-[var(--text)] backdrop-blur-md"
                   aria-label="Imagem anterior"
                 >
                   ‹
                 </button>
                 <button
                   onClick={() => setLightboxIndex((prev) => prev === null ? prev : (prev + 1) % galleryImages.length)}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 px-3 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 px-3 py-2 rounded-full bg-mineral/10 hover:bg-mineral/20 text-[var(--text)] backdrop-blur-md"
                   aria-label="Próxima imagem"
                 >
                   ›
@@ -338,7 +338,7 @@ export function CaseDetailsPage() {
               alt={`${caseData.title} - Imagem ampliada ${lightboxIndex + 1}`}
               className="w-full h-auto rounded-xl shadow-2xl object-contain animate-[fadeIn_0.25s_ease]"
             />
-            <div className="text-center mt-4 text-white/80 text-sm">
+            <div className="text-center mt-4 text-mineral/80 text-sm">
               {lightboxIndex + 1} / {galleryImages.length}
             </div>
           </div>
@@ -358,13 +358,13 @@ export function CaseDetailsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contato"
-              className="px-8 py-4 bg-[var(--brand1)] text-white rounded-lg font-semibold hover:bg-[var(--brand2)] transition-colors shadow-lg hover:shadow-xl"
+              className="px-8 py-4 bg-[var(--action)] text-[var(--ink)] rounded-lg font-semibold hover:bg-[var(--text)] transition-colors shadow-lg hover:shadow-xl"
             >
               Fale Conosco
             </Link>
             <Link
               to="/#projetos"
-              className="px-8 py-4 bg-[var(--panel)] text-[var(--text)] rounded-lg font-semibold hover:bg-[var(--muted)]/10 transition-colors border border-[var(--muted)]/20"
+              className="px-8 py-4 bg-[var(--panel)] text-[var(--text)] rounded-lg font-semibold hover:bg-soft/10 transition-colors border border-soft/20"
             >
               Ver Mais Cases
             </Link>

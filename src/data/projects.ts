@@ -57,10 +57,10 @@ export type ProjectCase = {
   gallery: ProjectGalleryItem[];
 };
 
-const darkLogoClass = 'object-contain bg-[#050509] p-4 sm:p-6';
-const lightLogoClass = 'object-contain bg-white p-4 sm:p-6';
-const eclipseLogoClass = 'object-cover object-center bg-[#050509]';
-const nutriproLogoClass = 'object-cover object-center bg-[#f4eedf]';
+const darkLogoClass = 'object-contain bg-[var(--ink)] p-4 sm:p-6';
+const lightLogoClass = 'object-contain bg-[var(--text)] p-4 sm:p-6';
+const eclipseLogoClass = 'object-cover object-center bg-[var(--ink)]';
+const nutriproLogoClass = 'object-cover object-center bg-[var(--text)]';
 
 export const projectCases: ProjectCase[] = [
   {

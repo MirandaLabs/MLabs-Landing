@@ -22,14 +22,14 @@ export function ProductsPage() {
       <main id="main-content">
         <section className="pt-28 pb-12 sm:pt-36 sm:pb-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--brand2)] sm:text-sm">Produtos</p>
+            <p className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--link)] sm:text-sm">Produtos</p>
             <h1 className="mb-6 max-w-4xl text-4xl font-bold leading-[1.08] tracking-tight text-[var(--text)] sm:text-5xl lg:text-6xl">
               {productsSection.title}
             </h1>
             <p className="mb-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)]">{productsSection.description}</p>
             <Link
               to="/#software-sob-medida"
-              className="inline-flex min-h-[44px] items-center gap-2 font-semibold text-[var(--brand2)] transition-colors hover:text-[var(--text)]"
+              className="inline-flex min-h-[44px] items-center gap-2 font-semibold text-[var(--link)] transition-colors hover:text-[var(--text)]"
             >
               Precisa de algo sob medida? Fale com a gente
               <ArrowRightIcon size={18} aria-hidden="true" />
@@ -37,7 +37,7 @@ export function ProductsPage() {
           </div>
         </section>
 
-        <section aria-labelledby="estagios" className="border-y border-[var(--muted)]/15 bg-[var(--panel)] py-12 sm:py-14">
+        <section aria-labelledby="estagios" className="border-y border-soft/15 bg-[var(--panel)] py-12 sm:py-14">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 id="estagios" className="mb-6 text-xl font-bold text-[var(--text)]">
               Como ler o estágio
@@ -59,7 +59,7 @@ export function ProductsPage() {
               Qual é o seu?
             </h2>
 
-            <div className="hidden overflow-hidden rounded-lg border border-[var(--muted)]/15 md:block">
+            <div className="hidden overflow-hidden rounded-lg border border-soft/15 md:block">
               <table className="w-full border-collapse text-left">
                 <caption className="sr-only">Comparativo dos produtos da Miranda Labs por público, problema, estágio e próximo passo</caption>
                 <thead className="bg-[var(--panel)] text-sm text-[var(--muted)]">
@@ -71,11 +71,11 @@ export function ProductsPage() {
                     <th scope="col" className="px-5 py-4 font-semibold">Próximo passo</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[var(--muted)]/15">
+                <tbody className="divide-y divide-soft/15">
                   {products.map((product) => (
                     <tr key={product.id}>
                       <th scope="row" className="px-5 py-4 font-bold text-[var(--text)]">
-                        <a href={`#${product.id}`} className="hover:text-[var(--brand2)]">{product.name}</a>
+                        <a href={`#${product.id}`} className="hover:text-[var(--link)]">{product.name}</a>
                       </th>
                       <td className="px-5 py-4 text-[var(--muted)]">{product.audience}</td>
                       <td className="px-5 py-4 text-[var(--muted)]">{product.problemShort}</td>
@@ -89,7 +89,7 @@ export function ProductsPage() {
 
             <ul className="space-y-4 md:hidden">
               {products.map((product) => (
-                <li key={product.id} className="rounded-lg border border-[var(--muted)]/15 bg-[var(--panel)] p-5">
+                <li key={product.id} className="rounded-lg border border-soft/15 bg-[var(--panel)] p-5">
                   <a href={`#${product.id}`} className="text-xl font-bold text-[var(--text)]">{product.name}</a>
                   <div className="mt-2"><StageBadge stage={product.stage} /></div>
                   <p className="mt-3 text-[var(--muted)]">{product.audience}</p>
@@ -104,7 +104,7 @@ export function ProductsPage() {
         </section>
 
         {products.map((product) => (
-          <section key={product.id} id={product.id} aria-labelledby={`${product.id}-titulo`} className="scroll-mt-24 border-t border-[var(--muted)]/15 py-16 sm:py-20">
+          <section key={product.id} id={product.id} aria-labelledby={`${product.id}-titulo`} className="scroll-mt-24 border-t border-soft/15 py-16 sm:py-20">
             <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_1.6fr] lg:gap-16 lg:px-8">
               <div>
                 <h2 id={`${product.id}-titulo`} className="text-3xl font-bold text-[var(--text)] sm:text-4xl">{product.name}</h2>
@@ -114,16 +114,16 @@ export function ProductsPage() {
                 <p className="text-xl font-semibold leading-snug text-[var(--text)]">{product.tagline}</p>
                 <dl className="mt-6 space-y-3 text-[var(--muted)]">
                   <div>
-                    <dt className="inline font-semibold text-[var(--text)]/90">Para quem: </dt>
+                    <dt className="inline font-semibold text-mineral/90">Para quem: </dt>
                     <dd className="inline">{product.audience}</dd>
                   </div>
                   <div>
-                    <dt className="inline font-semibold text-[var(--text)]/90">Problema: </dt>
+                    <dt className="inline font-semibold text-mineral/90">Problema: </dt>
                     <dd className="inline">{product.problem}</dd>
                   </div>
                   {product.areas && (
                     <div>
-                      <dt className="inline font-semibold text-[var(--text)]/90">Áreas: </dt>
+                      <dt className="inline font-semibold text-mineral/90">Áreas: </dt>
                       <dd className="inline">{product.areas}</dd>
                     </div>
                   )}
@@ -135,7 +135,7 @@ export function ProductsPage() {
                       href={whatsappLink(product.cta.message)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-lg bg-[var(--text)] px-6 py-3 font-semibold text-[var(--bg)] transition-colors hover:bg-[var(--brand2)]"
+                      className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-lg bg-[var(--text)] px-6 py-3 font-semibold text-[var(--bg)] transition-colors hover:bg-[var(--link)]"
                     >
                       <MessageCircleIcon size={18} aria-hidden="true" />
                       {product.cta.label}
@@ -150,7 +150,7 @@ export function ProductsPage() {
           </section>
         ))}
 
-        <section className="border-t border-[var(--muted)]/15 bg-[var(--panel)] py-16 sm:py-20">
+        <section className="border-t border-soft/15 bg-[var(--panel)] py-16 sm:py-20">
           <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-[var(--text)] sm:text-4xl">Precisa de algo diferente?</h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-[var(--muted)]">
@@ -161,14 +161,14 @@ export function ProductsPage() {
                 href={whatsappLink(whatsappMessages.general)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[var(--brand1)] to-[var(--brand2)] px-8 py-4 font-semibold text-white transition-all hover:shadow-2xl"
+                className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-lg bg-[var(--action)] hover:bg-[var(--text)] px-8 py-4 font-semibold text-[var(--ink)] transition-all hover:shadow-2xl"
               >
                 <MessageCircleIcon size={20} aria-hidden="true" />
                 Conversar no WhatsApp
               </a>
               <Link
                 to="/#como-trabalhamos"
-                className="inline-flex min-h-[48px] items-center justify-center rounded-lg border border-[var(--muted)]/30 px-8 py-4 font-semibold text-[var(--text)] transition-colors hover:border-[var(--brand2)]"
+                className="inline-flex min-h-[48px] items-center justify-center rounded-lg border border-soft/30 px-8 py-4 font-semibold text-[var(--text)] transition-colors hover:border-[var(--link)]"
               >
                 Ver como trabalhamos
               </Link>

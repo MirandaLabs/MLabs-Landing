@@ -36,7 +36,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
           <Link to="/" className="flex items-center space-x-2" aria-label="Miranda Labs - página inicial">
-            <img src="/logo_miranda_labs.png" alt="" width={512} height={512} className="h-8 w-8 sm:h-10 sm:w-10" />
+            <img src="/logo_miranda_labs_128.png" alt="" width={128} height={128} className="h-8 w-8 sm:h-10 sm:w-10" />
             <span className="text-lg sm:text-xl font-bold text-[var(--text)]">
               Miranda Labs
             </span>

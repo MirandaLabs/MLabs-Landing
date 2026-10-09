@@ -5,14 +5,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-[var(--brand1)] to-[var(--brand2)] rounded-lg flex items-center justify-center overflow-hidden">
-                <img src="/logo_miranda_labs.png" alt="" className="h-full w-full object-cover" loading="lazy" decoding="async" />
-              </div>
-              <span className="text-xl font-bold text-[var(--text)]">
-                Miranda Labs
-              </span>
-            </div>
+            <img src="/logo_miranda_labs_horizontal.png" alt="Miranda Labs" width={561} height={192} className="mb-4 h-14 w-auto" loading="lazy" decoding="async" />
             <p className="text-[var(--muted)] text-sm leading-relaxed">
               Engenharia de software e design de produto para empresas que
               querem escalar

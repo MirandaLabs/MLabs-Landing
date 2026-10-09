@@ -9,13 +9,12 @@ export const hero = {
     'Criamos sistemas de gestão, CRM, automações e plataformas web para pequenas empresas e para quem quer transformar uma ideia ou processo em software próprio. Projetos publicados, com o que é entregue definido em contrato.',
   primaryCta: 'Explicar meu projeto no WhatsApp',
   secondaryCta: 'Ver projetos publicados',
-  trustLine:
-    'Projetos conduzidos pelos três sócios, com código-fonte, documentação, testes, deploy e suporte definidos em contrato.',
+  trustLine: 'Código-fonte, documentação, testes, deploy e suporte definidos em contrato.',
   imageAlt: 'Página inicial do portal do CLBMCS 2026, projeto publicado pela Miranda Labs',
 };
 
 export const facts = [
-  { title: '3 sócios', text: 'diretamente envolvidos em cada projeto' },
+  { title: '3 sócios', text: 'à frente da empresa, cada um com sua área' },
   { title: 'Projetos publicados', text: 'que você pode abrir e conferir no ar' },
   { title: '3 produtos próprios', text: 'cada um com o estágio informado' },
   { title: 'Entrega completa', text: 'código, documentação e deploy no mesmo projeto' },

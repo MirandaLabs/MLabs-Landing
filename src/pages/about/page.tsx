@@ -17,19 +17,17 @@ type TeamMember = {
 const team = teamData as TeamMember[];
 
 const roleColor: Record<TeamMember['role'], string> = {
-  CEO: 'var(--brand1)',
-  CTO: 'var(--brand2)',
-  COO: 'var(--brand3)',
+  CEO: 'var(--action)',
+  CTO: 'var(--link)',
+  COO: 'var(--alert)',
 };
 
 function MemberAvatar({ member }: { member: TeamMember }) {
   const color = roleColor[member.role];
   return (
     <div
-      className="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-full text-2xl font-bold text-white shadow-lg"
-      style={{
-        background: `linear-gradient(135deg, ${color} 0%, color-mix(in srgb, ${color} 70%, #000) 100%)`,
-      }}
+      className="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-full text-2xl font-bold text-[var(--ink)] shadow-lg"
+      style={{ background: color }}
       aria-hidden="true"
     >
       {member.initials}
@@ -66,7 +64,7 @@ export function AboutPage() {
       <Header />
       <main id="main-content" className="pt-24 pb-16">
         <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[var(--brand2)]">Quem somos</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[var(--link)]">Quem somos</p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
             Engenharia séria, conversa direta, entrega previsível.
           </h1>
@@ -83,13 +81,13 @@ export function AboutPage() {
             {team.map((member) => (
               <article
                 key={member.name}
-                className="flex flex-col rounded-2xl border border-[var(--muted)]/15 bg-[var(--panel)] p-6"
+                className="flex flex-col rounded-2xl border border-soft/15 bg-[var(--panel)] p-6"
               >
                 <div className="flex items-center gap-4">
                   <MemberAvatar member={member} />
                   <div className="min-w-0">
                     <h3 className="text-xl font-semibold truncate">{member.name}</h3>
-                    <p className="mt-1 text-sm font-semibold text-[var(--brand2)]">{member.role}</p>
+                    <p className="mt-1 text-sm font-semibold text-[var(--link)]">{member.role}</p>
                   </div>
                 </div>
                 <p className="mt-5 text-[var(--muted)] leading-relaxed text-sm">{member.bio}</p>
@@ -98,7 +96,7 @@ export function AboutPage() {
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[var(--text)] transition-colors hover:text-[var(--brand2)]"
+                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[var(--text)] transition-colors hover:text-[var(--link)]"
                     aria-label={`LinkedIn de ${member.name}`}
                   >
                     <LinkedinIcon size={16} aria-hidden="true" />
@@ -116,14 +114,14 @@ export function AboutPage() {
             {team.map((member) => (
               <div
                 key={member.name}
-                className="rounded-2xl border border-[var(--muted)]/15 bg-[var(--panel)] p-6"
+                className="rounded-2xl border border-soft/15 bg-[var(--panel)] p-6"
               >
                 <h3 className="text-lg font-semibold mb-4">{member.name}</h3>
                 <div className="flex flex-wrap gap-2">
                   {member.specialties.map((spec) => (
                     <span
                       key={spec}
-                      className="rounded-md bg-[var(--bg)]/70 border border-[var(--muted)]/15 px-2.5 py-1 text-xs font-medium text-[var(--muted)]"
+                      className="rounded-md bg-ink/70 border border-soft/15 px-2.5 py-1 text-xs font-medium text-[var(--muted)]"
                     >
                       {spec}
                     </span>
@@ -135,7 +133,7 @@ export function AboutPage() {
         </section>
 
         <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 mt-16">
-          <div className="rounded-2xl border border-[var(--muted)]/15 bg-[var(--panel)] p-8 sm:p-10">
+          <div className="rounded-2xl border border-soft/15 bg-[var(--panel)] p-8 sm:p-10">
             <h2 className="text-2xl font-bold mb-3">Nossa atuação</h2>
             <p className="text-[var(--muted)] text-base sm:text-lg leading-relaxed">
               Combinamos alto nível técnico com proximidade na comunicação. Entregamos sistemas
@@ -146,13 +144,13 @@ export function AboutPage() {
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
               <Link
                 to="/contato"
-                className="inline-flex justify-center rounded-lg bg-gradient-to-r from-[var(--brand1)] to-[var(--brand2)] px-6 py-3 font-semibold text-white transition-all hover:shadow-lg"
+                className="inline-flex justify-center rounded-lg bg-[var(--action)] hover:bg-[var(--text)] px-6 py-3 font-semibold text-[var(--ink)] transition-all hover:shadow-lg"
               >
                 Solicitar orçamento
               </Link>
               <Link
-                to="/#cases"
-                className="inline-flex justify-center rounded-lg border border-[var(--muted)]/30 px-6 py-3 font-semibold text-[var(--text)] transition-colors hover:border-[var(--brand2)] hover:bg-[var(--brand2)]/5"
+                to="/#projetos"
+                className="inline-flex justify-center rounded-lg border border-soft/30 px-6 py-3 font-semibold text-[var(--text)] transition-colors hover:border-[var(--link)] hover:bg-link/5"
               >
                 Ver projetos
               </Link>

@@ -75,7 +75,7 @@ export function OrkestraPreRegister() {
   return (
     <section className="py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="overflow-hidden rounded-lg border border-[var(--brand1)]/20 bg-gradient-to-br from-[var(--brand1)]/10 via-[var(--brand2)]/10 to-[var(--brand3)]/10 p-6 sm:p-10">
+        <div className="overflow-hidden rounded-lg border border-link/20 bg-[var(--panel)] p-6 sm:p-10">
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-widest text-[var(--muted)]">Pré-cadastro</p>
@@ -88,7 +88,7 @@ export function OrkestraPreRegister() {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4 rounded-lg border border-[var(--muted)]/10 bg-[var(--panel)] p-6">
+            <form onSubmit={handleSubmit} className="space-y-4 rounded-lg border border-soft/10 bg-[var(--panel)] p-6">
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
                   <label htmlFor="orkestra-name" className="mb-2 block text-sm font-medium text-[var(--text)]">
@@ -103,7 +103,7 @@ export function OrkestraPreRegister() {
                     required
                     maxLength={80}
                     autoComplete="name"
-                    className="w-full rounded-lg border border-[var(--muted)]/20 bg-[var(--bg)] px-4 py-3 text-[var(--text)] transition-all focus:outline-none focus:ring-2 focus:ring-[var(--brand1)]"
+                    className="w-full rounded-lg border border-soft/70 bg-[var(--bg)] px-4 py-3 text-[var(--text)] transition-all focus:outline-none focus:ring-2 focus:ring-[var(--link)]"
                     placeholder="Seu nome"
                   />
                 </div>
@@ -120,7 +120,7 @@ export function OrkestraPreRegister() {
                     required
                     maxLength={120}
                     autoComplete="email"
-                    className="w-full rounded-lg border border-[var(--muted)]/20 bg-[var(--bg)] px-4 py-3 text-[var(--text)] transition-all focus:outline-none focus:ring-2 focus:ring-[var(--brand1)]"
+                    className="w-full rounded-lg border border-soft/70 bg-[var(--bg)] px-4 py-3 text-[var(--text)] transition-all focus:outline-none focus:ring-2 focus:ring-[var(--link)]"
                     placeholder="seu@email.com"
                   />
                 </div>
@@ -142,7 +142,7 @@ export function OrkestraPreRegister() {
               <button
                 type="submit"
                 disabled={state === 'loading'}
-                className="flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[var(--brand1)] to-[var(--brand2)] px-6 py-3 font-semibold text-white transition-all hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
+                className="flex w-full items-center justify-center gap-2 rounded-lg bg-[var(--action)] hover:bg-[var(--text)] px-6 py-3 font-semibold text-[var(--ink)] transition-all hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {state === 'loading' ? (
                   <>
@@ -158,13 +158,13 @@ export function OrkestraPreRegister() {
               </button>
 
               {state === 'success' && (
-                <p className="flex items-center gap-2 text-sm text-[var(--ok)]" role="status">
+                <p className="flex items-center gap-2 text-sm text-[var(--action)]" role="status">
                   <CheckCircle2Icon size={16} aria-hidden="true" />
                   Pré-cadastro recebido! Em breve enviaremos novidades para o seu e-mail.
                 </p>
               )}
               {state === 'error' && (
-                <p className="text-sm text-[var(--brand3)]" role="alert">
+                <p className="text-sm text-[var(--alert)]" role="alert">
                   {errorMessage}
                 </p>
               )}

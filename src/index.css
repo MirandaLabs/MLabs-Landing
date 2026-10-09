@@ -4,14 +4,18 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  --bg: #0b1220;
-  --panel: #0f172a;
-  --text: #e2e8f0;
-  --muted: #94a3b8;
-  --brand1: #7c3aed;
-  --brand2: #22d3ee;
-  --brand3: #f59e0b;
-  --ok: #10b981;
+  /* Paleta oficial. Qualquer cor nova deve sair destes cinco valores. */
+  --ink: #101b29; /* fundo principal */
+  --mineral: #f4f5f2; /* texto e superfícies claras */
+  --action: #b7f34a; /* CTA principal e sinal de ação */
+  --alert: #ff6b57; /* alertas e destaques pontuais */
+  --link: #55c9e8; /* links, informação e elementos interativos */
+
+  /* Derivados por mistura dos valores acima, sem cor nova. */
+  --bg: var(--ink);
+  --panel: color-mix(in srgb, var(--mineral) 5%, var(--ink));
+  --text: var(--mineral);
+  --muted: color-mix(in srgb, var(--mineral) 70%, var(--ink));
 }
 html {
   scroll-behavior: smooth;
@@ -31,11 +35,11 @@ img {
   max-width: 100%;
 }
 :focus-visible {
-  outline: 3px solid var(--brand2);
+  outline: 3px solid var(--link);
   outline-offset: 3px;
 }
 ::selection {
-  background: var(--brand2);
+  background: var(--link);
   color: var(--bg);
 }
 @media (prefers-reduced-motion: reduce) {
